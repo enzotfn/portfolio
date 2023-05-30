@@ -92,7 +92,7 @@ b, strong {
   transition: all 0.4s ease;
 }
 .custom-btn:hover {
-  color: #ffc200;
+  color: #9900ff;
 }
 .custom-btn.custom-btn-bg {
   background: #474559;
@@ -214,7 +214,7 @@ b, strong {
 
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
-  color: #ffc200;
+  color: #9900ff;
   font-weight: bold;
 }
 .navbar-light .navbar-nav .nav-link:focus span,
@@ -296,7 +296,7 @@ b, strong {
   color: rgba(255, 255, 255, 0.8);
 }
 .dark-mode .navbar-light .navbar-nav .nav-link:hover {
-  color: #ffc200;
+  color: #9900ff;
 }
 .dark-mode .navbar[class*="headroom--not-top"] {
   background: #0c0c0d;
@@ -462,7 +462,7 @@ b, strong {
   margin: 5px 0;
 }
 .social-links .uil:hover {
-  color: #ffc200;
+  color: #9900ff;
 }
 
 @media (min-width: 1270px) {
@@ -567,4 +567,8 @@ b, strong {
     display: inline-block;
     vertical-align: top;
   }
+}
+
+a>h3>span {
+  color: #9900ff;
 }
