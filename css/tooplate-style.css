@@ -17,6 +17,7 @@ body {
   padding: 8rem 0;
 }
 
+
 .small-text {
   color: #5b5b5b;
   font-size: 14px;
@@ -571,4 +572,27 @@ b, strong {
 
 a>h3>span {
   color: #9900ff;
+}
+
+.raph {
+  display: flex;
+  justify-content: row;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+  align-items: center;
+  width: 100%;
+}
+
+.raph>.col-12 {
+  flex : 0 0 50%;
+}
+
+.raph>.owl-carousel {
+  width: 60vw;
+  height: 100%;
+}
+
+.raph>.owl-item {
+  width: 100%;
 }
