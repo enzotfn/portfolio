@@ -30,9 +30,6 @@ export default function Skills() {
           <h2 className="section-title">
             Control <span className="highlight">Panel</span>
           </h2>
-          <p className="skills-intro">
-            An AR-style overview of my technical arsenal and competences.
-          </p>
         </div>
 
         <div className="skills-panels">
@@ -124,20 +121,33 @@ export default function Skills() {
               <h3 className="panel-title">Competences</h3>
             </div>
 
-            <div className="comp-grid">
-              {competences.map((comp, index) => (
-                <div
-                  key={index}
-                  className="comp-tag"
-                  style={{ animationDelay: `${index * 80}ms` }}
-                  id={`comp-${index}`}
-                >
-                  <span className="comp-name">{comp.name}</span>
-                  {comp.detail && (
+            <div className="comp-grid-group" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
+              {/* Detailed competences (2 lines) */}
+              <div className="comp-grid">
+                {competences.filter(c => c.detail).map((comp, index) => (
+                  <div
+                    key={`detailed-${index}`}
+                    className="comp-tag"
+                    style={{ animationDelay: `${index * 80}ms` }}
+                  >
+                    <span className="comp-name">{comp.name}</span>
                     <span className="comp-detail">{comp.detail}</span>
-                  )}
-                </div>
-              ))}
+                  </div>
+                ))}
+              </div>
+
+              {/* Simple competences (1 line) */}
+              <div className="comp-grid">
+                {competences.filter(c => !c.detail).map((comp, index) => (
+                  <div
+                    key={`simple-${index}`}
+                    className="comp-tag"
+                    style={{ animationDelay: `${(competences.filter(c => c.detail).length + index) * 80}ms` }}
+                  >
+                    <span className="comp-name">{comp.name}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

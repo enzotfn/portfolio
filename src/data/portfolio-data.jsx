@@ -22,18 +22,24 @@ export const personalInfo = {
 
 export const services = [
   {
-    icon: '🎨',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+    ),
     title: 'Web Design',
     description:
       'The most modern and high-quality design due to my artistic sensibility.',
   },
   {
-    icon: '💻',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+    ),
     title: 'Web Development',
     description: 'High-quality full-stack development of modern websites and applications.',
   },
   {
-    icon: '📱',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+    ),
     title: 'Computer & Mobile Programming',
     description:
       'Development of programs in Python, C/C++, Golang, Java and Kotlin.',

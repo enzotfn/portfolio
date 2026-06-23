@@ -38,6 +38,10 @@
   border: 1px solid var(--color-border-glass);
 }
 
+.viewfinder-corners {
+  z-index: 2;
+}
+
 .viewfinder-corners span {
   position: absolute;
   width: 30px;
@@ -76,6 +80,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
+  z-index: 2;
 }
 
 .reticle-h,
@@ -103,24 +108,13 @@
   z-index: 1;
 }
 
-.avatar-placeholder {
-  width: 160px;
-  height: 160px;
-  border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--color-accent-violet-dim), var(--color-accent-gold-dim));
-  border: 2px solid var(--color-accent-violet);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-glow-violet);
-}
-
-.avatar-initials {
-  font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--color-accent-violet);
-  font-style: italic;
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  position: absolute;
+  filter: grayscale(20%) contrast(1.1);
 }
 
 .viewfinder-data {
@@ -134,6 +128,7 @@
   font-size: 0.65rem;
   color: var(--color-accent-violet);
   opacity: 0.5;
+  z-index: 2;
 }
 
 .viewfinder-data span:first-child {
