@@ -1,0 +1,219 @@
+/* ── Contact Section ─────────────────────── */
+
+.contact {
+  padding-left: calc(var(--nav-width) + var(--space-lg));
+}
+
+.contact-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.contact-header {
+  margin-bottom: var(--space-xl);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+}
+
+.contact-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-intro {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-3xl);
+}
+
+/* ── Contact Cards ──────────────────────── */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s var(--ease-out-expo) 0.2s, transform 0.8s var(--ease-out-expo) 0.2s;
+}
+
+.contact-info.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-base);
+}
+
+a.contact-card:hover {
+  transform: translateX(8px);
+  border-color: var(--color-accent-violet-dim);
+  box-shadow: var(--shadow-glow-violet);
+}
+
+.contact-card-icon {
+  font-size: 1.5rem;
+  color: var(--color-accent-violet);
+  opacity: 0.7;
+  width: 40px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.contact-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-card-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.contact-card-value {
+  font-size: var(--fs-small);
+  color: var(--color-text-primary);
+  word-break: break-all;
+}
+
+.contact-card-arrow {
+  font-size: 1.2rem;
+  color: var(--color-accent-violet);
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+a.contact-card:hover .contact-card-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Social buttons */
+.contact-social {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.contact-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--color-border-glass);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  transition: all var(--transition-base);
+}
+
+.contact-social-btn:hover {
+  color: var(--color-accent-violet);
+  border-color: var(--color-accent-violet);
+  background: var(--color-accent-violet-dim);
+  box-shadow: var(--shadow-glow-violet);
+  transform: translateY(-4px);
+}
+
+/* ── Map ────────────────────────────────── */
+.contact-map {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s var(--ease-out-expo) 0.4s, transform 0.8s var(--ease-out-expo) 0.4s;
+}
+
+.contact-map.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.map-wrapper {
+  height: 100%;
+  min-height: 350px;
+  overflow: hidden;
+  padding: 0;
+}
+
+.map-wrapper iframe {
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
+/* ── Footer ─────────────────────────────── */
+.portfolio-footer {
+  text-align: center;
+  padding: var(--space-lg) 0;
+}
+
+.footer-line {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-accent-violet), transparent);
+  margin: 0 auto var(--space-md);
+}
+
+.footer-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+}
+
+.footer-name {
+  color: var(--color-text-secondary);
+}
+
+.footer-separator {
+  color: var(--color-accent-violet);
+  opacity: 0.4;
+}
+
+.footer-tag {
+  color: var(--color-accent-gold);
+  opacity: 0.5;
+  font-style: italic;
+}
+
+/* ── Responsive ─────────────────────────── */
+@media (max-width: 768px) {
+  .contact {
+    padding-left: var(--space-sm);
+    padding-bottom: calc(100px + var(--space-lg));
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .map-wrapper {
+    min-height: 250px;
+  }
+}

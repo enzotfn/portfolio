@@ -1,0 +1,33 @@
+/* ── App-level layout styles ─────────────── */
+
+/* Ensure sections flow vertically */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Smooth reveal for all sections */
+main > section {
+  will-change: opacity;
+}
+
+/* Film strip side decoration on desktop */
+@media (min-width: 769px) {
+  main::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: var(--nav-width);
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--color-border-glass) 20%,
+      var(--color-border-glass) 80%,
+      transparent
+    );
+    z-index: 10;
+    pointer-events: none;
+  }
+}
