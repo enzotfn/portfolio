@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enzotfn.github.io/portfolio/sitemap.xml
