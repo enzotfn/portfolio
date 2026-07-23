@@ -101,7 +101,7 @@ export default function Hero() {
       <div className="hero-content">
         <div className="hero-eyebrow">
           <span className="eyebrow-line" />
-          <span className="eyebrow-text">Portfolio — 2025</span>
+          <span className="eyebrow-text">Portfolio — 2026</span>
           <span className="eyebrow-line" />
         </div>
 
