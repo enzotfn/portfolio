@@ -7,11 +7,19 @@ export const personalInfo = {
   name: 'Enzo Tofani',
   title: 'Computer Science Student',
   tagline: 'Art & Tech Enthusiast',
-  bio: `As a dedicated computer science student, I have a keen interest in art in general and computer science, particularly new technologies. I would love to bring my technical expertise and artistic sensibility to your projects.`,
+  bio:
+    <>
+      Passionate about the convergence of technology and creativity, I combine technical rigor with artistic sensibility to design innovative interactive experiences.
+      With a keen interest in new forms of interaction (particularly AR/VR) and new technologies, I approach every project through a dual lens: technical performance and a dedicated focus on user immersion.
+      <br></br>
+      Objective: A 6-month end-of-studies internship, beginning in mid-February or March, within the field of computer science - ideally centered on technological innovation and immersive technologies (AR/VR, Creative Tech).
+      <br></br>
+      I am open to new opportunities and discussions; please feel free to reach out.
+    </>,
   email: 'enzo.tofani@etu.univ-nantes.fr',
   phone: '+33 6 58 39 22 07',
   birthday: 'April 17, 2003',
-  location: 'Nantes, France',
+  location: 'Nantes, Lyon, Nancy - France',
   social: {
     linkedin: 'https://www.linkedin.com/in/enzotofani/',
     instagram: 'https://www.instagram.com/enzo.tfn/',
@@ -56,14 +64,14 @@ export const services = [
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
     ),
     title: 'Innovative Applications',
-    description: 'Creation of applications and innovative interfaces on new platforms.',
+    description: 'Creation of applications and innovative interfaces on new platforms (VR and AR).',
   },
 ];
 
 export const education = [
   {
     institution: 'Polytech Nantes',
-    period: '2024 — Present',
+    period: '2024 — 2027 (Present)',
     description:
       'School of engineering in computer science with network specialization.',
   },
@@ -77,11 +85,13 @@ export const education = [
 
 export const experience = [
   {
-    role: 'Internship in Web Development',
+    role: 'Internship in Web Development (Full Stack)',
     company: 'South Tours, Málaga (Spain)',
     period: 'May 2026 — August 2026',
     description:
-      'Full stack development of a website for a tourism company using Strapi and React, all by myself.',
+      <>
+        Full stack development of a <a href="https://south.tours" target="_blank" rel="noopener noreferrer">website</a> for a tourism company using Strapi, React, Vite and Tailwind, all by myself. Creation of an AI Agent and some Webhooks.
+      </>
   },
   {
     role: 'Internship in Software Documentation',
@@ -144,6 +154,20 @@ export const projectCategories = [
 
 export const projects = [
   {
+    title: 'Research & Development Project',
+    category: 'Application',
+    description: 'Immersive multi-viewpoint visualization of an activity for self-confrontation. Drafting a state-of-the-art review on the self-confrontation method, and developing a virtual reality application for viewing synchronized 360° videos with the ability to switch viewpoints. This final-year project involved working with professional 360° cameras, virtual reality headsets, and wearable camera glasses.',
+    color: '#3498db',
+  },
+  {
+    title: 'Networking Partner Space',
+    category: 'Network',
+    description:
+      'Development of a Python-based networked application to synchronize order taking from Android phones to Linux-based preparation stations, including order printing. This involved creating an Android application, a database, and an API. — La Nuit de l\'Erdre festival',
+    link: 'https://www.lanuitdelerdre.fr',
+    color: '#2ecc71',
+  },
+  {
     title: 'Univerciné Nantes',
     category: 'Others',
     description: 'Jury of a film festival for 2 years',
@@ -153,17 +177,9 @@ export const projects = [
   {
     title: 'Theater Classes in Nantes',
     category: 'Others',
-    description: 'For 3 years with public performances',
+    description: 'For 4 years with public performances. Actor and director',
     link: 'https://www.univ-nantes.fr/vie-de-campus/culture-sport/les-etudiants-sur-scene-latelier-de-pratique-theatrale',
     color: '#f39c12',
-  },
-  {
-    title: 'Networking Partner Space',
-    category: 'Network',
-    description:
-      'Create an Android and a web application to take orders and manage them — La Nuit de l\'Erdre festival',
-    link: 'https://www.lanuitdelerdre.fr',
-    color: '#2ecc71',
   },
   {
     title: 'Mixed Media Utilities',
