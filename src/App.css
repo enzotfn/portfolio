@@ -1,17 +1,17 @@
-/* ── App-level layout styles ─────────────── */
+/* ── App-level layout & magnetic scroll-snap ─────────── */
 
-/* Ensure sections flow vertically */
 main {
   position: relative;
   z-index: 1;
 }
 
-/* Smooth reveal for all sections */
 main > section {
-  will-change: opacity;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  will-change: transform, opacity;
 }
 
-/* Film strip side decoration on desktop */
+/* Precision technical rail lines on desktop */
 @media (min-width: 769px) {
   main::before {
     content: '';
@@ -20,14 +20,8 @@ main > section {
     bottom: 0;
     left: var(--nav-width);
     width: 1px;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--color-border-glass) 20%,
-      var(--color-border-glass) 80%,
-      transparent
-    );
-    z-index: 10;
+    background: var(--color-border-hairline);
+    z-index: 140;
     pointer-events: none;
   }
 }

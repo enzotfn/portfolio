@@ -1,28 +1,32 @@
 // ═══════════════════════════════════════════
 // PORTFOLIO DATA — Enzo Tofani
-// All content centralized here
+// Édition Française — Dialogue Beaux-Arts & Code
 // ═══════════════════════════════════════════
 
 export const personalInfo = {
   name: 'Enzo Tofani',
-  title: 'Computer Science Student',
-  tagline: 'Art & Tech Enthusiast',
-  bio:
+  title: 'Ingénieur Informatique & Creative Technologist',
+  tagline: 'Systèmes bas-niveau, informatique spatiale (XR) & direction visuelle',
+  status: 'Stage PFE · 6 Mois · Fév / Mars 2027',
+  coordinates: '47°16\'58"N 01°30\'56"W // NANTES',
+  bio: (
     <>
-      Passionate about the convergence of technology and creativity, I combine technical rigor with artistic sensibility to design innovative interactive experiences.
-      With a keen interest in new forms of interaction (particularly AR/VR) and new technologies, I approach every project through a dual lens: technical performance and a dedicated focus on user immersion.
-      <br></br>
-      Objective: A 6-month end-of-studies internship, beginning in mid-February or March, within the field of computer science - ideally centered on technological innovation and immersive technologies (AR/VR, Creative Tech).
-      <br></br>
-      I am open to new opportunities and discussions; please feel free to reach out.
-    </>,
+      Je conçois des logiciels où l&apos;exigence d&apos;architecture rencontre une véritable sensibilité visuelle. Actuellement en dernière année de cycle ingénieur à Polytech Nantes, je ne vois pas le code comme une mécanique neutre : qu&apos;il s&apos;agisse d&apos;écrire des boucles de paquets bas-niveau en C, d&apos;orchestrer des rigs VR multi-caméras 360° pour la recherche, ou de déployer seul une plateforme de production complète en Espagne.
+      <br /><br />
+      Nourri par une forte attirance pour les musées, les œuvres d&apos;art classiques et contemporaines, le cinéma et quatre années de mise en scène théâtrale, j&apos;apporte dans l&apos;ingénierie technique un souci constant de la composition, du rythme et de l&apos;immersion.
+      <br /><br />
+      <span className="bio-focus-label">PROCHAINE ÉTAPE //</span> À la recherche d&apos;un stage de fin d&apos;études (PFE) de 6 mois à partir de mi-février ou mars 2027 — orienté ingénierie créative, XR / informatique spatiale ou développement logiciel à fort impact.
+    </>
+  ),
   email: 'enzo.tofani@etu.univ-nantes.fr',
   phone: '+33 6 58 39 22 07',
-  birthday: 'April 17, 2003',
-  location: 'Nantes, Lyon, Nancy - France',
+  birthday: '17 Avril 2003',
+  location: 'Nantes · Lyon · Nancy (France)',
   social: {
     linkedin: 'https://www.linkedin.com/in/enzotofani/',
     instagram: 'https://www.instagram.com/enzo.tfn/',
+    github: 'https://github.com/enzotfn',
+    letterboxd: 'https://letterboxd.com/enzotfn/',
   },
   mapEmbed:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13165.93570232979!2d-1.5185640476684572!3d47.2852652433783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805efd6216e050b%3A0xb9ac813651ea9d23!2s%C3%89cole%20polytechnique%20universitaire%20de%20Nantes%20Universit%C3%A9%20(Polytech%20Nantes)!5e1!3m2!1sfr!2sfr!4v1762944101221!5m2!1sfr!2sfr',
@@ -30,229 +34,468 @@ export const personalInfo = {
 
 export const services = [
   {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
-    ),
-    title: 'Web Design',
+    id: 'xr',
+    code: 'SYS-01',
+    title: 'Informatique Spatiale & XR',
+    subtitle: 'Systèmes VR & Captation 360° Multi-Points de Vue',
     description:
-      'The most modern and high-quality design due to my artistic sensibility.',
+      'Conception d’environnements immersifs et d’interactions spatiales. Synchronisation de flux vidéo 360°, déploiement sur casques de réalité virtuelle et expérimentations avec lunettes-caméras pour l’auto-confrontation et l’immersion.',
+    tags: ['Casques VR', 'Caméras 360°', 'Optique Embarquée', 'Synchro Spatiale', 'R&D'],
+    linkedSkills: ['Python & Intégration IA', 'C / C++', 'React / Vite / CSS Moderne'],
+    proofs: [
+      'Plateforme VR d’auto-confrontation (bascule temps réel entre flux 360° synchronisés)',
+      'État de l’art académique sur les protocoles immersifs multi-angles',
+    ],
   },
   {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-    ),
-    title: 'Web Development',
-    description: 'High-quality full-stack development of modern websites and applications.',
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-    ),
-    title: 'Computer & Mobile Programming',
+    id: 'fullstack',
+    code: 'SYS-02',
+    title: 'Développement Web & Full-Stack',
+    subtitle: 'De la Base de Données à l’Interface',
     description:
-      'Development of programs in Python, C/C++, Golang, Java and Kotlin.',
+      'Applications web de production taillées sur mesure. React, Vite, Strapi, Tailwind : aucun template générique, des micro-interactions soignées, des webhooks automatisés et des agents IA conversationnels.',
+    tags: ['React 19', 'Vite', 'Tailwind', 'Strapi CMS', 'REST / Webhooks', 'Agents IA'],
+    linkedSkills: ['React / Vite / CSS Moderne', 'Full-Stack (Node / Strapi / SQL)', 'Python & Intégration IA'],
+    proofs: [
+      'South Tours Málaga — Conception et mise en production en autonomie (south.tours)',
+      'Happy Hour Nantes & Voituragogo — Architectures web responsives',
+    ],
   },
   {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-    ),
-    title: 'Network & Infrastructure',
-    description: 'Network management, infrastructure architecture, and system administration.',
+    id: 'systems',
+    code: 'SYS-03',
+    title: 'Systèmes & Code Concurrent',
+    subtitle: 'Mémoire Bas-Niveau, Physique & Heuristiques',
+    description:
+      'Développement logiciel déterministe en C/C++, Golang, Java et Python. Des moteurs physiques de particules utilisant les goroutines jusqu’aux algorithmes de routage par théorie des graphes et IA de jeu.',
+    tags: ['C / C++', 'Golang', 'Python', 'Java / Kotlin', 'Goroutines', 'Algorithmes'],
+    linkedSkills: ['C / C++', 'Golang', 'Python & Intégration IA', 'Kotlin & Android / Java'],
+    proofs: [
+      'Moteur de Particules Go — Simulation physique 2D temps réel via goroutines',
+      'IA Heuristique Risk — Arbres de décision en C++ et Python',
+      'Poly# — Calcul de routage optique optimal par théorie des graphes',
+    ],
   },
   {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
-    ),
-    title: 'Innovative Applications',
-    description: 'Creation of applications and innovative interfaces on new platforms (VR and AR).',
+    id: 'network',
+    code: 'SYS-04',
+    title: 'Architecture Réseau & Ops',
+    subtitle: 'Systèmes Distribués & Synchronisation Terrain',
+    description:
+      'Spécialisation réseau à Polytech Nantes : routage de paquets bruts, programmation socket, serveurs d’impression Linux autonomes et synchronisation de terminaux mobiles sous forte charge en festival.',
+    tags: ['TCP/IP & Sockets', 'Daemons Linux', 'Anneaux de Paquets', 'Clients Android', 'Infrastructure'],
+    linkedSkills: ['Linux, Bash & Réseaux', 'C / C++', 'Kotlin & Android / Java', 'Python & Intégration IA'],
+    proofs: [
+      'Festival La Nuit de l’Erdre — Réseau local de prise de commande Android vers Linux',
+      'Boucle Réseau Déterministe — Simulation d’anneau à paquet unique en C pur',
+      'BRAS Immobilier — Déploiement de parc et supervision réseau multi-agences',
+    ],
+  },
+  {
+    id: 'direction',
+    code: 'SYS-05',
+    title: 'Scénographie & Direction Visuelle',
+    subtitle: 'Sensibilité Artistique, Musées & Mise en Scène',
+    description:
+      'Forgé par une passion pour les œuvres d’art et les musées, 4 ans de mise en scène théâtrale et la participation au jury d’un festival de cinéma européen. Une approche qui traite chaque interface comme une composition vivante.',
+    tags: ['Mise en Scène', 'Culture Muséale', 'Jury Cinéma', 'Composition Spatiale', 'Direction UI'],
+    linkedSkills: ['React / Vite / CSS Moderne'],
+    proofs: [
+      '4 années de jeu et de mise en scène théâtrale avec représentations publiques',
+      '2 éditions comme membre du jury au Festival Européen Univerciné',
+      'Hackathon Musée — Conception d’une application de fluidification des parcours visiteurs',
+    ],
   },
 ];
 
 export const education = [
   {
-    institution: 'Polytech Nantes',
-    period: '2024 — 2027 (Present)',
+    id: 'edu-polytech',
+    code: 'EDU-02',
+    track: 'ACADÉMIQUE',
+    year: '2024 — 2027',
+    institution: 'Polytech Nantes — École d’Ingénieurs',
+    period: '2024 — 2027 (En cours)',
+    location: 'Nantes, France',
+    focus: 'Génie Informatique · Spécialisation Réseaux & Systèmes Distribués',
     description:
-      'School of engineering in computer science with network specialization.',
+      'Cycle ingénieur informatique avec spécialisation en architecture réseau. Formation approfondie en systèmes d’exploitation, protocoles distribués, algorithmique avancée, programmation concurrente et R&D en réalité virtuelle.',
+    highlights: ['Spécialisation Réseaux & Systèmes', 'Projet R&D VR 360°', 'Diplôme d’Ingénieur (2027)'],
   },
   {
-    institution: 'IUT of Nantes — Polytech Nantes',
+    id: 'edu-iut',
+    code: 'EDU-01',
+    track: 'ACADÉMIQUE',
+    year: '2022 — 2024',
+    institution: 'IUT de Nantes — Cycle Préparatoire Polytech (PeiP)',
     period: '2022 — 2024',
+    location: 'Nantes, France',
+    focus: 'Informatique Fondamentale & Systèmes',
     description:
-      'Two years university preparation courses for Polytech in computer science.',
+      'Deux années de parcours universitaire préparatoire aux écoles Polytech en informatique. Bases solides en structures de données, programmation orientée objet (Java, Kotlin, C++), bases de données relationnelles, Linux et langage C.',
+    highlights: ['Structures de Données & Algo', 'Programmation C & Unix', 'POO Java / Kotlin'],
   },
 ];
 
 export const experience = [
   {
-    role: 'Internship in Web Development (Full Stack)',
-    company: 'South Tours, Málaga (Spain)',
-    period: 'May 2026 — August 2026',
-    description:
+    id: 'exp-southtours',
+    code: 'EXP-04',
+    track: 'PRODUCTION',
+    year: '2026',
+    role: 'Développeur Full-Stack (Stage en autonomie complète)',
+    company: 'South Tours, Málaga (Espagne)',
+    period: 'Mai 2026 — Août 2026',
+    location: 'Málaga, Espagne',
+    stack: ['React', 'Vite', 'Strapi', 'Tailwind', 'Agent IA', 'Webhooks'],
+    description: (
       <>
-        Full stack development of a <a href="https://south.tours" target="_blank" rel="noopener noreferrer">website</a> for a tourism company using Strapi, React, Vite and Tailwind, all by myself. Creation of an AI Agent and some Webhooks.
+        Conception et développement complet du nouveau <a href="https://south.tours" target="_blank" rel="noopener noreferrer">site de production</a> d&apos;une entreprise de tourisme en tant que seul développeur sur place. Architecture backend Strapi, frontend React/Vite/Tailwind, création de webhooks automatisés et intégration d&apos;un agent IA conversationnel.
       </>
+    ),
   },
   {
-    role: 'Internship in Software Documentation',
-    company: 'DrillScan — H&P, Lyon (France)',
-    period: 'June 2025 — August 2025',
+    id: 'exp-drillscan',
+    code: 'EXP-03',
+    track: 'INGÉNIERIE',
+    year: '2025',
+    role: 'Stage en Documentation Logicielle & Structuration',
+    company: 'DrillScan — Helmerich & Payne, Lyon (France)',
+    period: 'Juin 2025 — Août 2025',
+    location: 'Lyon, France',
+    stack: ['Architecture Documentaire', 'Migration Technique', 'Outillage Dev', 'Collaboration R&D'],
     description:
-      'Updating, restructuring, and migrating software documentation in collaboration with the development team to improve its clarity and usability.',
+      'Intégré directement à l’équipe de développement d’un éditeur international de logiciels scientifiques de forage. Refonte, restructuration et migration de la documentation technique afin d’en améliorer la clarté et l’usage quotidien entre ingénieurs et développeurs.',
   },
   {
-    role: 'Internship in IT Support',
+    id: 'exp-bras',
+    code: 'EXP-02',
+    track: 'INFRASTRUCTURE',
+    year: '2024',
+    role: 'Stage Support Systèmes & Infrastructure IT',
     company: 'BRAS Immobilier, Nantes (France)',
-    period: 'April 2024 — July 2024',
+    period: 'Avril 2024 — Juillet 2024',
+    location: 'Nantes, France',
+    stack: ['Déploiement de Parc', 'Administration Système', 'Supervision Réseau', 'Support Technique'],
     description:
-      'Providing technical support to employees, preparing and deploying equipment, monitoring systems, and contributing to technical documentation.',
+      'Support technique aux collaborateurs, préparation et déploiement des équipements informatiques, supervision de l’infrastructure système et rédaction de procédures techniques claires pour les équipes.',
   },
   {
-    role: 'Versatile Employee',
+    id: 'exp-goupil',
+    code: 'EXP-01',
+    track: 'OPÉRATIONS TERRAIN',
+    year: '2019 — 2023',
+    role: 'Employé Polyvalent & Gestion d’Espaces de Loisirs',
     company: 'La Forêt de Goupil — Les Manèges, Nancy (France)',
-    period: '2019 — 2023',
+    period: '2019 — 2023 (4 Ans)',
+    location: 'Nancy, France',
+    stack: ['Gestion de Flux', 'Sang-Froid & Sécurité', 'Maintenance Matérielle', 'Encadrement Public'],
     description:
-      'Supervising children, teenagers, and adults in a leisure complex (game room, laser tag, trampoline park, go-karting) with daily cleaning. Worked during holidays and weekends.',
+      'Quatre années consécutives à encadrer enfants, adolescents et adultes au sein d’un grand complexe de loisirs (laser game, trampoline park, karting indoor, salle d’arcade) durant les week-ends et vacances scolaires. Gestion de la sécurité, maintenance rapide et maîtrise des fortes affluences.',
   },
 ];
 
 export const technicalSkills = [
-  { name: 'HTML/CSS/JS & React', level: 90 },
-  { name: 'Full Stack Development', level: 85 },
-  { name: 'Kotlin / Java', level: 80 },
-  { name: 'C / C++', level: 75 },
-  { name: 'Golang', level: 70 },
-  { name: 'Bash', level: 70 },
-  { name: 'Agile Method', level: 80 },
+  {
+    name: 'React / Vite / CSS Moderne',
+    tag: 'Interfaces & Animations',
+    tier: 'PRODUCTION',
+    context: 'Applications web complètes livrées en production et interfaces spatiales interactives',
+    projectsCount: 5,
+    level: 90,
+  },
+  {
+    name: 'Full-Stack (Node / Strapi / SQL)',
+    tag: 'API & Modèles de Données',
+    tier: 'PRODUCTION',
+    context: 'Architectures CMS headless, schémas relationnels, API REST et pipelines webhooks',
+    projectsCount: 4,
+    level: 85,
+  },
+  {
+    name: 'Python & Intégration IA',
+    tag: 'Serveurs, Algorithmes & IA',
+    tier: 'PRODUCTION / R&D',
+    context: 'Serveur de synchronisation festival, routage par graphes, agents IA et outils CLI',
+    projectsCount: 5,
+    level: 85,
+  },
+  {
+    name: 'C / C++',
+    tag: 'Mémoire & Réseau Bas-Niveau',
+    tier: 'SYSTÈMES',
+    context: 'Simulation d’anneau réseau à paquet unique en C et moteur d’IA heuristique en C++',
+    projectsCount: 3,
+    level: 80,
+  },
+  {
+    name: 'Linux, Bash & Réseaux',
+    tag: 'Spécialité Ingénieur Polytech',
+    tier: 'CŒUR DE MÉTIER',
+    context: 'Protocoles distribués, serveurs d’impression Linux, routage socket et administration',
+    projectsCount: 4,
+    level: 80,
+  },
+  {
+    name: 'Golang',
+    tag: 'Simulations Concurrentes',
+    tier: 'SYSTÈMES',
+    context: 'Moteur physique de systèmes de particules 2D en temps réel via goroutines',
+    projectsCount: 2,
+    level: 75,
+  },
+  {
+    name: 'Kotlin & Android / Java',
+    tag: 'Applications Mobiles & Lourdes',
+    tier: 'APPLICATIONS',
+    context: 'Terminaux mobiles Android de prise de commande en festival et hackathon musée en Java',
+    projectsCount: 3,
+    level: 75,
+  },
 ];
 
 export const languages = [
-  { name: 'French', detail: 'Native', level: 100 },
-  { name: 'English', detail: '915 TOEIC', level: 80 },
-  { name: 'Italian', detail: 'A2/B1', level: 45 },
+  { code: 'FR', name: 'Français', detail: 'Langue maternelle', metric: 'NATIF', bars: 10, level: 100 },
+  { code: 'EN', name: 'Anglais', detail: 'Pratique professionnelle en contexte international', metric: '915 TOEIC', bars: 9, level: 88 },
+  { code: 'IT', name: 'Italien', detail: 'Bases conversationnelles et culturelles', metric: 'NIVEAU A2 / B1', bars: 5, level: 50 },
 ];
 
 export const competences = [
-  { name: 'Art History', detail: 'Certificate validated by Sorbonne University' },
-  { name: 'Mental Health First Responder', detail: 'Certificate validated by PSSM France' },
-  { name: 'Driving License', detail: 'Since November 2021' },
-  { name: 'Rigorous' },
-  { name: 'Curious' },
-  { name: 'Persevering' },
-  { name: 'Organized' },
-  { name: 'Interpersonal Skills' },
+  {
+    code: 'MIL-01',
+    name: 'Théâtre — Acteur & Metteur en Scène',
+    detail: '4 années de pratique théâtrale à Nantes avec représentations publiques et direction d’acteurs',
+    type: 'ARTS DE LA SCÈNE',
+  },
+  {
+    code: 'MIL-02',
+    name: 'Jury de Festival de Cinéma',
+    detail: 'Univerciné Nantes — Membre du jury officiel durant 2 éditions (visionnage, débats et remise de prix)',
+    type: 'CINÉMA EUROPÉEN',
+  },
+  {
+    code: 'MIL-03',
+    name: 'Secouriste en Santé Mentale',
+    detail: 'Certificat officiel validé par PSSM France — écoute active et intervention de premier secours',
+    type: 'ENGAGEMENT HUMAIN',
+  },
+  {
+    code: 'MIL-04',
+    name: 'Histoire de l’Art',
+    detail: 'Sensibilité aux œuvres classiques et modernes — certificat validé par Sorbonne Université',
+    type: 'CULTURE & MUSÉES',
+  },
+  {
+    code: 'MIL-05',
+    name: 'Autonomie Internationale',
+    detail: 'Capacité éprouvée à concevoir et livrer seul un produit complet en entreprise à l’étranger',
+    type: 'TERRAIN',
+  },
+  {
+    code: 'MIL-06',
+    name: 'Maîtrise & Sang-Froid Opérationnel',
+    detail: '4 ans d’encadrement du public et de gestion du rythme en complexe de loisirs',
+    type: 'OPÉRATIONS',
+  },
+  {
+    code: 'MIL-07',
+    name: 'Permis de Conduire (B)',
+    detail: 'Mobilité complète depuis novembre 2021',
+    type: 'MOBILITÉ',
+  },
 ];
 
 export const projectCategories = [
-  'All',
-  'Web Design',
+  'Tous',
   'Applications',
-  'Web Development',
-  'Network',
-  'Others',
+  'Réseau',
+  'Développement Web',
+  'Web Design',
+  'Autres',
 ];
 
 export const projects = [
   {
-    title: 'Research & Development Project',
-    category: 'Application',
-    description: 'Immersive multi-viewpoint visualization of an activity for self-confrontation. Drafting a state-of-the-art review on the self-confrontation method, and developing a virtual reality application for viewing synchronized 360° videos with the ability to switch viewpoints. This final-year project involved working with professional 360° cameras, virtual reality headsets, and wearable camera glasses.',
-    color: '#3498db',
-  },
-  {
-    title: 'Networking Partner Space',
-    category: 'Network',
+    id: 'vr-self-confrontation',
+    code: 'PRJ-01',
+    title: 'Projet R&D — Réalité Virtuelle & Auto-Confrontation',
+    category: 'Applications',
+    simType: 'vr360',
+    year: '2026',
     description:
-      'Development of a Python-based networked application to synchronize order taking from Android phones to Linux-based preparation stations, including order printing. This involved creating an Android application, a database, and an API. — La Nuit de l\'Erdre festival',
+      'Visualisation immersive multi-points de vue d’une activité pour l’auto-confrontation. Rédaction d’un état de l’art scientifique, puis développement d’une application de réalité virtuelle permettant de visionner des vidéos 360° synchronisées et de basculer d’un angle de vue à l’autre en temps réel (caméras 360° professionnelles, casques VR et lunettes caméra).',
+    tech: 'Casques VR · Caméras 360° · Lunettes Caméra',
+    specs: ['Flux 360° Synchronisés', 'Bascule de Point de Vue Temps Réel', 'Calibration Matérielle'],
+    color: '#6d28d9',
+  },
+  {
+    id: 'nuit-de-lerdre',
+    code: 'PRJ-02',
+    title: 'Espace Partenaires en Réseau — La Nuit de l’Erdre',
+    category: 'Réseau',
+    simType: 'network',
+    year: '2025',
+    description:
+      'Développement d’une architecture réseau en Python pour synchroniser la prise de commandes depuis des téléphones Android vers des postes de préparation sous Linux, incluant l’impression thermique automatique des bons via une API et une base de données locale.',
+    tech: 'Android · API Python · Serveurs Linux',
+    specs: ['Terminaux Mobiles Android', 'API REST & Base de Données', 'Impression Automatisée sous Linux'],
     link: 'https://www.lanuitdelerdre.fr',
-    color: '#2ecc71',
+    color: '#8b5cf6',
   },
   {
-    title: 'Univerciné Nantes',
-    category: 'Others',
-    description: 'Jury of a film festival for 2 years',
+    id: 'go-particles',
+    code: 'PRJ-03',
+    title: 'Moteur de Système de Particules en Go',
+    category: 'Applications',
+    simType: 'particles',
+    year: '2024',
+    description:
+      'Application développée en Golang pour simuler des systèmes de particules physiques en 2D temps réel, exploitant la concurrence pour calculer les vecteurs de vélocité, la gravité et les collisions.',
+    tech: 'Golang · Concurrence · Physique 2D',
+    specs: ['Exécution Concurrente Go', 'Rendu Temps Réel 60 FPS', 'Champs de Vecteurs Dynamiques'],
+    color: '#6d28d9',
+  },
+  {
+    id: 'packet-loop',
+    code: 'PRJ-04',
+    title: 'Boucle Réseau Locale à Paquet Unique',
+    category: 'Réseau',
+    simType: 'ring',
+    year: '2024',
+    description:
+      'Application bas-niveau écrite en C pur permettant de simuler une boucle réseau locale en anneau dans laquelle circule un unique paquet de données sans perte ni collision.',
+    tech: 'Langage C · Sockets · Topologie en Anneau',
+    specs: ['Gestion Mémoire en C', 'Routage Déterministe', 'Zéro Perte de Trame'],
+    color: '#8b5cf6',
+  },
+  {
+    id: 'poly-sharp',
+    code: 'PRJ-05',
+    title: 'Poly# — Optimisation de Routage Réseau',
+    category: 'Applications',
+    simType: 'graph',
+    year: '2024',
+    description:
+      'Développement d’un moteur algorithmique en Python chargé de calculer la route optimale et de minimiser la latence pour un opérateur réseau à travers un graphe pondéré.',
+    tech: 'Python · Théorie des Graphes · Algorithmes',
+    specs: ['Recherche de Plus Court Chemin', 'Topologie Télécom', 'Optimisation de Coût'],
+    color: '#b08221',
+  },
+  {
+    id: 'risk-ai',
+    code: 'PRJ-06',
+    title: 'Intelligence Artificielle sur le Jeu Risk',
+    category: 'Applications',
+    simType: 'ai',
+    year: '2024',
+    description:
+      'Conception d’une intelligence artificielle capable de jouer de manière autonome au jeu de stratégie Risk, combinant la rapidité d’exécution du C++ et la souplesse de Python pour évaluer les probabilités de conquête.',
+    tech: 'Python · C++ · Arbres Heuristiques',
+    specs: ['Évaluation Probabiliste', 'Cœur C++ / Interface Python', 'Stratégie Autonome'],
+    color: '#6d28d9',
+  },
+  {
+    id: 'univercine',
+    code: 'PRJ-07',
+    title: 'Jury du Festival Univerciné Nantes',
+    category: 'Autres',
+    simType: 'cinema',
+    year: '2023 — 2025',
+    description:
+      'Membre du jury officiel d’un festival de cinéma européen à Nantes pendant 2 ans. Visionnage de longs-métrages en compétition, délibérations critiques et remise des prix en public.',
+    tech: 'Jury Cinéma · Analyse Critique · Culture',
+    specs: ['2 Éditions du Festival', 'Sélection Européenne', 'Délibérations & Remise de Prix'],
     link: 'https://www.univercine-nantes.org/',
-    color: '#e74c3c',
+    color: '#b08221',
   },
   {
-    title: 'Theater Classes in Nantes',
-    category: 'Others',
-    description: 'For 4 years with public performances. Actor and director',
+    id: 'theater-nantes',
+    code: 'PRJ-08',
+    title: 'Théâtre — Jeu & Mise en Scène à Nantes',
+    category: 'Autres',
+    simType: 'stage',
+    year: '2022 — 2026',
+    description:
+      'Quatre années au sein de l’atelier de pratique théâtrale avec représentations publiques, à la fois comme comédien et metteur en scène. Travail de l’espace, du rythme dramaturgique et de la direction de troupe.',
+    tech: 'Mise en Scène · Jeu d’Acteur · Scénographie',
+    specs: ['4 Saisons & Spectacles Publics', 'Comédien & Metteur en Scène', 'Direction Spatiale'],
     link: 'https://www.univ-nantes.fr/vie-de-campus/culture-sport/les-etudiants-sur-scene-latelier-de-pratique-theatrale',
-    color: '#f39c12',
+    color: '#6d28d9',
   },
   {
+    id: 'museum-hackathon',
+    code: 'PRJ-09',
+    title: 'Hackathon Java — Expérience au Musée',
+    category: 'Applications',
+    simType: 'graph',
+    year: '2024',
+    description:
+      'Conception en équipe d’une application Java lors d’un hackathon pour résoudre une problématique concrète de parcours et de médiation au sein d’un musée.',
+    tech: 'Java · Hackathon · Scénographie Muséale',
+    specs: ['Sprint Intensif', 'Parcours Visiteur Musée', 'Architecture Java'],
+    color: '#b08221',
+  },
+  {
+    id: 'mixed-media',
+    code: 'PRJ-10',
     title: 'Mixed Media Utilities',
     category: 'Applications',
-    description: 'Create a Python application to handle mixed media files',
+    simType: 'pipeline',
+    year: '2024',
+    description:
+      'Création d’une suite d’outils en Python permettant d’analyser, trier, convertir et gérer automatiquement des bibliothèques de fichiers multimédias hétérogènes.',
+    tech: 'Python · Automatisation Média · CLI',
+    specs: ['Traitement par Lots', 'Inspection de Métadonnées', 'Code Open-Source'],
     link: 'https://github.com/enzotfn/mixedmedia',
-    color: '#3498db',
+    color: '#8b5cf6',
   },
   {
-    title: 'Poly#',
-    category: 'Applications',
-    description:
-      'Create a Python application to calculate the optimal route for a network provider',
-    link: null,
-    color: '#9b59b6',
-  },
-  {
-    title: 'Local Network Loop',
-    category: 'Network',
-    description:
-      'Create a C application to simulate a local network loop with only one packet inside',
-    link: null,
-    color: '#1abc9c',
-  },
-  {
-    title: 'IA on Risk Game',
-    category: 'Applications',
-    description: 'Create an AI to play the Risk game on Python and C++',
-    link: null,
-    color: '#e67e22',
-  },
-  {
-    title: 'Java Hackathon',
-    category: 'Applications',
-    description: 'Create a Java application to solve a specific problem for a museum',
-    link: null,
-    color: '#e74c3c',
-  },
-  {
-    title: 'Project Particles',
-    category: 'Applications',
-    description: 'Application developed in Golang to simulate particle systems',
-    link: null,
-    color: '#b84dff',
-  },
-  {
-    title: 'PrimeSetup',
+    id: 'primesetup',
+    code: 'PRJ-11',
+    title: 'PrimeSetup — E-Commerce',
     category: 'Web Design',
-    description: 'Designing and developing an online sales site',
-    link: null,
-    color: '#d4a853',
+    simType: 'ui',
+    year: '2023',
+    description:
+      'Conception graphique et développement d’un site de vente en ligne dédié aux équipements et espaces de travail, avec un soin particulier porté à la hiérarchie visuelle.',
+    tech: 'UI/UX Design · Web Responsive',
+    specs: ['Direction Artistique Web', 'Interface Épurée', 'Parcours E-Commerce'],
+    color: '#b08221',
   },
   {
+    id: 'happy-hour-nantes',
+    code: 'PRJ-12',
     title: 'Happy Hour Nantes',
     category: 'Web Design',
-    description: 'Designing and developing a website',
+    simType: 'ui',
+    year: '2023',
+    description:
+      'Création du design et développement d’un site web culturel et convivial répertoriant les adresses nantaises.',
+    tech: 'HTML/CSS/JS · Design Éditorial',
+    specs: ['Guide Local Nantais', 'Mise en Page Responsive', 'Déploiement En Ligne'],
     link: 'https://raphour.github.io/site_communication_professionelle/',
-    color: '#f1c40f',
+    color: '#6d28d9',
   },
   {
+    id: 'voituragogo',
+    code: 'PRJ-13',
     title: 'Voituragogo',
-    category: 'Web Development',
-    description: 'Development of a website based on an already done design',
-    link: null,
-    color: '#2980b9',
+    category: 'Développement Web',
+    simType: 'ui',
+    year: '2023',
+    description:
+      'Développement et intégration fidèle d’une application web à partir d’une maquette graphique exigeante, dans le respect des standards d’accessibilité et de responsive design.',
+    tech: 'Intégration Web · CSS Grid · HTML Sémantique',
+    specs: ['Fidélité Maquette', 'Grille Multi-Écrans', 'Standards du Web'],
+    color: '#8b5cf6',
   },
 ];
 
 export const navItems = [
-  { id: 'hero', label: 'Home', icon: '⌂' },
-  { id: 'about', label: 'About', icon: '◎' },
-  { id: 'resume', label: 'Resume', icon: '◈' },
-  { id: 'skills', label: 'Skills', icon: '◇' },
-  { id: 'projects', label: 'Projects', icon: '▣' },
-  { id: 'contact', label: 'Contact', icon: '✦' },
+  { id: 'hero', code: '00', label: 'Accueil', title: 'PROLOGUE // ACCUEIL' },
+  { id: 'about', code: '01', label: 'Profil', title: 'PORTRAIT // DÉMARCHE' },
+  { id: 'resume', code: '02', label: 'Parcours', title: 'CATALOGUE // PARCOURS' },
+  { id: 'skills', code: '03', label: 'Savoir-Faire', title: 'ARCHITECTURE // SAVOIR-FAIRE' },
+  { id: 'projects', code: '04', label: 'Projets', title: 'COLLECTION // PROJETS' },
+  { id: 'contact', code: '05', label: 'Contact', title: 'ÉPILOGUE // CONTACT' },
 ];

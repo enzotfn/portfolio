@@ -1,154 +1,105 @@
-import { useEffect, useRef, useState } from 'react';
-import { technicalSkills, languages, competences } from '../data/portfolio-data';
+import { services, technicalSkills, languages, competences } from '../data/portfolio-data';
+import ArtEngraving from './ArtEngraving';
 import './Skills.css';
 
+const ROMAN = ['I', 'II', 'III', 'IV', 'V'];
+
 export default function Skills() {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section className="skills section" id="skills" ref={sectionRef} aria-label="Skills">
-      <div className="skills-container">
-        <div className={`skills-header ${isVisible ? 'visible' : ''}`}>
-          <span className="section-label">03 — Skills</span>
-          <h2 className="section-title">
-            Control <span className="highlight">Panel</span>
-          </h2>
+    <section className="skills workstation-scene" id="skills" aria-label="Disciplines et Savoir-Faire">
+      <div className="scene-inner">
+        <div className="slate-header">
+          <div className="slate-header-left">
+            <span className="slate-code">03 // SAVOIR-FAIRE</span>
+            <h2 className="slate-title">
+              Disciplines <span className="italic-amber">&amp; Architecture Technique</span>
+            </h2>
+          </div>
+          <span className="slate-meta">Cinq Domaines Clés &middot; Systèmes, XR &amp; Culture Visuelle</span>
         </div>
 
-        <div className="skills-panels">
-          {/* Technical Skills */}
-          <div className={`skills-panel ${isVisible ? 'visible' : ''}`}>
-            <div className="panel-header">
-              <span className="panel-icon">⬡</span>
-              <h3 className="panel-title">Technical Skills</h3>
-              <span className="panel-badge">Scene IV</span>
-            </div>
+        {/* TEMPS I : Les 5 Domaines en Cartes Épurées */}
+        <div className="skills-block">
+          <div className="skills-block-head">
+            <span className="block-roman">I.</span>
+            <h3 className="block-title">Domaines d&apos;Intervention</h3>
+          </div>
 
-            <div className="skills-bars">
-              {technicalSkills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="skill-bar-item"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <div className="skill-bar-header">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-level">{skill.level}%</span>
+          <div className="domains-clean-grid">
+            {services.map((srv, idx) => (
+              <article key={srv.id} className="domain-clean-card" data-hover>
+                <div className="domain-card-top">
+                  <span className="domain-roman">{ROMAN[idx]}</span>
+                  <span className="domain-code">{srv.subtitle}</span>
+                </div>
+                <h4 className="domain-title">{srv.title}</h4>
+                <p className="domain-desc">{srv.description}</p>
+                <div className="domain-tags">
+                  {srv.tags.map((t) => (
+                    <span key={t} className="domain-tag">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        {/* TEMPS II : Stack Technique & Langues en Typographie Claire */}
+        <div className="skills-block">
+          <div className="skills-block-head">
+            <span className="block-roman">II.</span>
+            <h3 className="block-title">Architecture Technique &amp; Langues</h3>
+          </div>
+
+          <div className="stack-and-lang-grid">
+            <div className="stack-clean-list">
+              {technicalSkills.map((sk) => (
+                <div key={sk.name} className="stack-clean-row">
+                  <div className="stack-row-left">
+                    <span className="stack-name">{sk.name}</span>
+                    <span className="stack-context">{sk.context}</span>
                   </div>
-                  <div className="skill-bar-track">
-                    <div
-                      className="skill-bar-fill"
-                      style={{
-                        width: isVisible ? `${skill.level}%` : '0%',
-                        transitionDelay: `${index * 100 + 300}ms`,
-                      }}
-                    />
-                    <div
-                      className="skill-bar-glow"
-                      style={{
-                        left: isVisible ? `${skill.level}%` : '0%',
-                        transitionDelay: `${index * 100 + 300}ms`,
-                      }}
-                    />
-                  </div>
+                  <span className="stack-tier">{sk.tier}</span>
                 </div>
               ))}
             </div>
-          </div>
 
-          {/* Languages */}
-          <div className={`skills-panel ${isVisible ? 'visible' : ''}`}>
-            <div className="panel-header">
-              <span className="panel-icon">◈</span>
-              <h3 className="panel-title">Languages</h3>
-            </div>
-
-            <div className="lang-grid">
-              {languages.map((lang, index) => (
-                <div key={index} className="lang-card" id={`lang-${index}`}>
-                  <div className="lang-circle">
-                    <svg viewBox="0 0 100 100" className="lang-svg">
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="42"
-                        className="lang-track"
-                      />
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="42"
-                        className="lang-fill"
-                        style={{
-                          strokeDasharray: `${2 * Math.PI * 42}`,
-                          strokeDashoffset: isVisible
-                            ? `${2 * Math.PI * 42 * (1 - lang.level / 100)}`
-                            : `${2 * Math.PI * 42}`,
-                          transitionDelay: `${index * 200 + 500}ms`,
-                        }}
-                      />
-                    </svg>
-                    <span className="lang-percent">{lang.level}%</span>
+            <div className="languages-clean-col">
+              <div className="lang-col-label">LANGUES &amp; COMMUNICATION</div>
+              {languages.map((lang) => (
+                <div key={lang.code} className="lang-clean-item">
+                  <div className="lang-clean-top">
+                    <span className="lang-clean-name">{lang.name}</span>
+                    <span className="lang-clean-metric">{lang.metric}</span>
                   </div>
-                  <h4 className="lang-name">{lang.name}</h4>
-                  <span className="lang-detail">{lang.detail}</span>
+                  <span className="lang-clean-detail">{lang.detail}</span>
                 </div>
               ))}
+
+              <div className="skills-art-box">
+                <ArtEngraving variant="sculpture" height={115} />
+              </div>
             </div>
           </div>
+        </div>
 
-          {/* Competences */}
-          <div className={`skills-panel ${isVisible ? 'visible' : ''}`}>
-            <div className="panel-header">
-              <span className="panel-icon">✦</span>
-              <h3 className="panel-title">Competences</h3>
-            </div>
+        {/* TEMPS III : Atouts Humains & Ouverture Culturelle */}
+        <div className="skills-block">
+          <div className="skills-block-head">
+            <span className="block-roman">III.</span>
+            <h3 className="block-title">Ouverture Culturelle, Scène &amp; Terrain</h3>
+          </div>
 
-            <div className="comp-grid-group" style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
-              {/* Detailed competences (2 lines) */}
-              <div className="comp-grid">
-                {competences.filter(c => c.detail).map((comp, index) => (
-                  <div
-                    key={`detailed-${index}`}
-                    className="comp-tag"
-                    style={{ animationDelay: `${index * 80}ms` }}
-                  >
-                    <span className="comp-name">{comp.name}</span>
-                    <span className="comp-detail">{comp.detail}</span>
-                  </div>
-                ))}
+          <div className="milestones-clean-grid">
+            {competences.map((comp) => (
+              <div key={comp.code} className="milestone-clean-item">
+                <span className="milestone-clean-type">{comp.type}</span>
+                <h4 className="milestone-clean-name">{comp.name}</h4>
+                <p className="milestone-clean-detail">{comp.detail}</p>
               </div>
-
-              {/* Simple competences (1 line) */}
-              <div className="comp-grid">
-                {competences.filter(c => !c.detail).map((comp, index) => (
-                  <div
-                    key={`simple-${index}`}
-                    className="comp-tag"
-                    style={{ animationDelay: `${(competences.filter(c => c.detail).length + index) * 80}ms` }}
-                  >
-                    <span className="comp-name">{comp.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
