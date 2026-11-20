@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { personalInfo } from '../data/portfolio-data';
 import profilePic from '../assets/profil_pic.jpg';
+import { ArrowUpRight } from './ArrowIcon';
 import './About.css';
 
 export default function About() {
@@ -16,17 +17,12 @@ export default function About() {
     <section className="about workstation-scene" id="about" aria-label="Portrait et Démarche">
       <div className="scene-inner">
         <div className="slate-header">
-          <div className="slate-header-left">
-            <span className="slate-code">01 // PORTRAIT</span>
-            <h2 className="slate-title">
-              Entre Systèmes <span className="italic-amber">&amp; Beaux-Arts</span>
-            </h2>
-          </div>
-          <span className="slate-meta">Informatique, Espace Spatial &amp; Culture Visuelle</span>
+          <h2 className="slate-title">
+            Entre Systèmes <span className="italic-amber">&amp; Beaux-Arts</span>
+          </h2>
         </div>
 
         <div className="about-gallery-grid">
-          {/* Portrait naturel sans effets */}
           <div className="portrait-frame">
             <img
               className="portrait-image"
@@ -35,13 +31,12 @@ export default function About() {
             />
           </div>
 
-          {/* Biographie & Coordonnées */}
           <div className="about-curatorial-col">
             <div className="bio-prose">{personalInfo.bio}</div>
 
             <div className="about-cartel-footer">
               <div className="cartel-item">
-                <span className="cartel-label">COURRIEL DIRECT</span>
+                <span className="cartel-label">COURRIEL</span>
                 <button
                   type="button"
                   className="cartel-copy-link"
@@ -50,7 +45,7 @@ export default function About() {
                 >
                   {personalInfo.email}{' '}
                   <span className="copy-badge">
-                    {copiedKey === 'email' ? '[COPIÉ ✓]' : '[COPIER]'}
+                    {copiedKey === 'email' ? 'Copié ✓' : 'Copier'}
                   </span>
                 </button>
               </div>
@@ -65,25 +60,25 @@ export default function About() {
                 >
                   {personalInfo.phone}{' '}
                   <span className="copy-badge">
-                    {copiedKey === 'phone' ? '[COPIÉ ✓]' : '[COPIER]'}
+                    {copiedKey === 'phone' ? 'Copié ✓' : 'Copier'}
                   </span>
                 </button>
               </div>
 
               <div className="cartel-item">
-                <span className="cartel-label">RÉSEAUX &amp; CODE</span>
+                <span className="cartel-label">LIENS</span>
                 <div className="cartel-socials">
                   <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer" data-hover>
-                    LinkedIn ↗
+                    LinkedIn<ArrowUpRight size={13} />
                   </a>
                   <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer" data-hover>
-                    GitHub ↗
+                    GitHub<ArrowUpRight size={13} />
                   </a>
                   <a href={personalInfo.social.instagram} target="_blank" rel="noopener noreferrer" data-hover>
-                    Instagram ↗
+                    Instagram<ArrowUpRight size={13} />
                   </a>
                   <a href={personalInfo.social.letterboxd} target="_blank" rel="noopener noreferrer" data-hover>
-                    Letterboxd ↗
+                    Letterboxd<ArrowUpRight size={13} />
                   </a>
                 </div>
               </div>

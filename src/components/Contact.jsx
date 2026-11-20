@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { personalInfo } from '../data/portfolio-data';
+import { ArrowUpRight, ArrowUp } from './ArrowIcon';
 import './Contact.css';
 
 export default function Contact() {
@@ -19,17 +20,13 @@ export default function Contact() {
     <section
       className="contact workstation-scene"
       id="contact"
-      aria-label="Contact et Épilogue"
+      aria-label="Contact"
     >
       <div className="scene-inner">
         <div className="slate-header">
-          <div className="slate-header-left">
-            <span className="slate-code">05 // ÉPILOGUE</span>
-            <h2 className="slate-title">
-              Entrer en <span className="italic-amber">Dialogue</span>
-            </h2>
-          </div>
-          <span className="slate-meta">Stage de Fin d&apos;Études (PFE) &middot; Fév / Mars 2027</span>
+          <h2 className="slate-title">
+            Entrer en <span className="italic-amber">Dialogue</span>
+          </h2>
         </div>
 
         <div className="contact-gallery-grid">
@@ -40,7 +37,7 @@ export default function Contact() {
 
             <div className="contact-clean-channels">
               <div className="clean-channel-row">
-                <span className="channel-roman">I // COURRIEL ÉLECTRONIQUE</span>
+                <span className="channel-roman">COURRIEL</span>
                 <div className="channel-main-line">
                   <a href={`mailto:${personalInfo.email}`} className="channel-big-link" data-hover>
                     {personalInfo.email}
@@ -51,13 +48,13 @@ export default function Contact() {
                     onClick={() => handleCopy('email', personalInfo.email)}
                     data-hover
                   >
-                    {copiedChannel === 'email' ? 'COPIÉ ✓' : 'COPIER'}
+                    {copiedChannel === 'email' ? 'Copié ✓' : 'Copier'}
                   </button>
                 </div>
               </div>
 
               <div className="clean-channel-row">
-                <span className="channel-roman">II // LIGNE DIRECTE</span>
+                <span className="channel-roman">TÉLÉPHONE</span>
                 <div className="channel-main-line">
                   <a href={`tel:${personalInfo.phone}`} className="channel-big-link" data-hover>
                     {personalInfo.phone}
@@ -68,13 +65,13 @@ export default function Contact() {
                     onClick={() => handleCopy('phone', personalInfo.phone)}
                     data-hover
                   >
-                    {copiedChannel === 'phone' ? 'COPIÉ ✓' : 'COPIER'}
+                    {copiedChannel === 'phone' ? 'Copié ✓' : 'Copier'}
                   </button>
                 </div>
               </div>
 
               <div className="clean-channel-row">
-                <span className="channel-roman">III // ARCHIVES &amp; RÉSEAUX</span>
+                <span className="channel-roman">RÉSEAUX</span>
                 <div className="channel-socials-row">
                   <a
                     href={personalInfo.social.linkedin}
@@ -83,7 +80,7 @@ export default function Contact() {
                     data-hover
                     id="contact-linkedin"
                   >
-                    LinkedIn ↗
+                    LinkedIn<ArrowUpRight size={15} />
                   </a>
                   <a
                     href={personalInfo.social.github}
@@ -92,7 +89,7 @@ export default function Contact() {
                     data-hover
                     id="contact-github"
                   >
-                    GitHub ↗
+                    GitHub<ArrowUpRight size={15} />
                   </a>
                   <a
                     href={personalInfo.social.instagram}
@@ -101,7 +98,7 @@ export default function Contact() {
                     data-hover
                     id="contact-instagram"
                   >
-                    Instagram ↗
+                    Instagram<ArrowUpRight size={15} />
                   </a>
                   <a
                     href={personalInfo.social.letterboxd}
@@ -110,7 +107,7 @@ export default function Contact() {
                     data-hover
                     id="contact-letterboxd"
                   >
-                    Letterboxd ↗
+                    Letterboxd<ArrowUpRight size={15} />
                   </a>
                 </div>
               </div>
@@ -132,7 +129,7 @@ export default function Contact() {
               title="Localisation - Polytech Nantes"
             />
             <div className="map-cartel-caption">
-              <span>POLYTECH NANTES // {personalInfo.location}</span>
+              <span>POLYTECH NANTES · {personalInfo.location}</span>
             </div>
           </div>
         </div>
@@ -140,15 +137,11 @@ export default function Contact() {
         <footer className="workstation-footer">
           <div className="footer-left">
             <span className="footer-unit">Enzo Tofani © {new Date().getFullYear()}</span>
-            <span className="footer-sep">—</span>
-            <span className="footer-note">
-              Ingénierie Informatique, Espace Spatial (XR) &amp; Arts Visuels
-            </span>
           </div>
 
           <button type="button" className="footer-top-btn" onClick={scrollToTop} data-hover>
-            <span>Retour au Prologue</span>
-            <span>↑</span>
+            <span>Haut de page</span>
+            <ArrowUp size={14} />
           </button>
         </footer>
       </div>

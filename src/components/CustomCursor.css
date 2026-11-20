@@ -1,57 +1,32 @@
 .custom-cursor {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 6px;
-  height: 6px;
-  background: var(--color-accent-violet);
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-accent);
   border-radius: 50%;
   pointer-events: none;
   z-index: var(--z-cursor);
   will-change: transform;
-  transition: width 0.2s var(--ease-out-expo),
-              height 0.2s var(--ease-out-expo),
-              background 0.2s var(--ease-out-expo),
-              margin 0.2s var(--ease-out-expo);
+  opacity: 0;
+  transition: width 0.16s ease, height 0.16s ease, top 0.16s ease, left 0.16s ease, background 0.16s ease, opacity 0.16s ease;
+}
+
+.custom-cursor.visible {
+  opacity: 1;
 }
 
 .custom-cursor.hovering {
-  width: 10px;
-  height: 10px;
+  top: -8px;
+  left: -8px;
+  width: 16px;
+  height: 16px;
   background: var(--color-accent-gilt);
-  margin-left: -2px;
-  margin-top: -2px;
-}
-
-.cursor-follower {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 34px;
-  height: 34px;
-  border: 1px solid rgba(109, 40, 217, 0.35);
-  border-radius: 2px;
-  pointer-events: none;
-  z-index: var(--z-cursor);
-  will-change: transform;
-  transition: width 0.3s var(--ease-out-expo),
-              height 0.3s var(--ease-out-expo),
-              border-color 0.3s var(--ease-out-expo),
-              margin 0.3s var(--ease-out-expo);
-}
-
-.cursor-follower.hovering {
-  width: 48px;
-  height: 48px;
-  border-color: var(--color-accent-violet);
-  background: rgba(109, 40, 217, 0.06);
-  margin-left: -7px;
-  margin-top: -7px;
 }
 
 @media (pointer: coarse), (max-width: 900px) {
-  .custom-cursor,
-  .cursor-follower {
+  .custom-cursor {
     display: none;
   }
 }

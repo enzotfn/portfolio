@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { projects, projectCategories } from '../data/portfolio-data';
+import { ArrowUpRight } from './ArrowIcon';
 import './Projects.css';
 
 export default function Projects() {
@@ -94,7 +95,7 @@ export default function Projects() {
           ctx.beginPath();
           ctx.ellipse(cx, cy + yOff, rLat, rLat * 0.35, yaw * 0.2, 0, Math.PI * 2);
           ctx.strokeStyle =
-            lat === 0 ? 'rgba(109, 40, 217, 0.5)' : 'rgba(23, 20, 31, 0.14)';
+            lat === 0 ? 'rgba(27, 77, 62, 0.5)' : 'rgba(24, 24, 23, 0.14)';
           ctx.stroke();
         }
 
@@ -111,17 +112,17 @@ export default function Projects() {
           ctx.beginPath();
           ctx.moveTo(cx, cy);
           ctx.lineTo(px, py);
-          ctx.strokeStyle = isCurrent ? '#6d28d9' : 'rgba(23, 20, 31, 0.2)';
+          ctx.strokeStyle = isCurrent ? '#1b4d3e' : 'rgba(24, 24, 23, 0.2)';
           ctx.lineWidth = isCurrent ? 1.5 : 1;
           ctx.stroke();
 
           ctx.beginPath();
           ctx.arc(px, py, isCurrent ? 4.5 : 3, 0, Math.PI * 2);
-          ctx.fillStyle = isCurrent ? '#6d28d9' : '#8b5cf6';
+          ctx.fillStyle = isCurrent ? '#1b4d3e' : '#2a6f59';
           ctx.fill();
 
-          ctx.font = '10px "JetBrains Mono", monospace';
-          ctx.fillStyle = isCurrent ? '#17141f' : 'rgba(23, 20, 31, 0.55)';
+          ctx.font = '10px "IBM Plex Mono", monospace';
+          ctx.fillStyle = isCurrent ? '#181817' : 'rgba(24, 24, 23, 0.55)';
           ctx.fillText(c.name, px + 8, py + 3);
         });
       } else if (sim === 'network') {
@@ -142,18 +143,18 @@ export default function Projects() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(serverX, serverY);
-          ctx.strokeStyle = 'rgba(23, 20, 31, 0.16)';
+          ctx.strokeStyle = 'rgba(24, 24, 23, 0.16)';
           ctx.stroke();
 
           const pt = (t + idx * 0.33) % 1;
           const kx = p.x + (serverX - p.x) * pt;
           const ky = p.y + (serverY - p.y) * pt;
-          ctx.fillStyle = '#6d28d9';
+          ctx.fillStyle = '#1b4d3e';
           ctx.fillRect(kx - 2.5, ky - 2.5, 5, 5);
 
           ctx.beginPath();
           ctx.arc(p.x, p.y, 4, 0, Math.PI * 2);
-          ctx.fillStyle = '#6d28d9';
+          ctx.fillStyle = '#1b4d3e';
           ctx.fill();
         });
 
@@ -161,18 +162,18 @@ export default function Projects() {
           ctx.beginPath();
           ctx.moveTo(serverX, serverY);
           ctx.lineTo(pr.x, pr.y);
-          ctx.strokeStyle = 'rgba(23, 20, 31, 0.16)';
+          ctx.strokeStyle = 'rgba(24, 24, 23, 0.16)';
           ctx.stroke();
 
           const pt = (t + idx * 0.5) % 1;
           const kx = serverX + (pr.x - serverX) * pt;
           const ky = serverY + (pr.y - serverY) * pt;
-          ctx.fillStyle = '#b08221';
+          ctx.fillStyle = '#9a6b24';
           ctx.fillRect(kx - 2.5, ky - 2.5, 5, 5);
 
           ctx.beginPath();
           ctx.arc(pr.x, pr.y, 4, 0, Math.PI * 2);
-          ctx.fillStyle = '#b08221';
+          ctx.fillStyle = '#9a6b24';
           ctx.fill();
         });
 
@@ -180,7 +181,7 @@ export default function Projects() {
         ctx.arc(serverX, serverY, 18, 0, Math.PI * 2);
         ctx.fillStyle = '#ffffff';
         ctx.fill();
-        ctx.strokeStyle = '#6d28d9';
+        ctx.strokeStyle = '#1b4d3e';
         ctx.lineWidth = 1.5;
         ctx.stroke();
       } else if (sim === 'particles') {
@@ -201,13 +202,13 @@ export default function Projects() {
 
           ctx.beginPath();
           ctx.arc(p.x * w, p.y * h, p.r, 0, Math.PI * 2);
-          ctx.fillStyle = Math.hypot(p.vx, p.vy) > 0.006 ? '#6d28d9' : '#8b5cf6';
+          ctx.fillStyle = Math.hypot(p.vx, p.vy) > 0.006 ? '#1b4d3e' : '#2a6f59';
           ctx.fill();
         });
 
         ctx.beginPath();
         ctx.arc(mx, my, 22, 0, Math.PI * 2);
-        ctx.strokeStyle = 'rgba(109, 40, 217, 0.35)';
+        ctx.strokeStyle = 'rgba(27, 77, 62, 0.35)';
         ctx.stroke();
       } else if (sim === 'ring') {
         const cx = w * 0.5;
@@ -217,7 +218,7 @@ export default function Projects() {
 
         ctx.beginPath();
         ctx.arc(cx, cy, r, 0, Math.PI * 2);
-        ctx.strokeStyle = 'rgba(23, 20, 31, 0.16)';
+        ctx.strokeStyle = 'rgba(24, 24, 23, 0.16)';
         ctx.stroke();
 
         const pktAngle = (time * 0.0026 + simPulse * 0.8) % (Math.PI * 2);
@@ -231,15 +232,15 @@ export default function Projects() {
 
           ctx.beginPath();
           ctx.arc(nx, ny, hot ? 5 : 3.5, 0, Math.PI * 2);
-          ctx.fillStyle = hot ? '#6d28d9' : '#ffffff';
+          ctx.fillStyle = hot ? '#1b4d3e' : '#ffffff';
           ctx.fill();
-          ctx.strokeStyle = 'rgba(23, 20, 31, 0.4)';
+          ctx.strokeStyle = 'rgba(24, 24, 23, 0.4)';
           ctx.stroke();
         }
 
         ctx.beginPath();
         ctx.arc(cx + Math.cos(pktAngle) * r, cy + Math.sin(pktAngle) * r, 5.5, 0, Math.PI * 2);
-        ctx.fillStyle = '#6d28d9';
+        ctx.fillStyle = '#1b4d3e';
         ctx.fill();
       } else if (sim === 'graph' || sim === 'ai') {
         gEdges.forEach(([i, j], idx) => {
@@ -249,7 +250,7 @@ export default function Projects() {
           ctx.beginPath();
           ctx.moveTo(n1.x * w, n1.y * h);
           ctx.lineTo(n2.x * w, n2.y * h);
-          ctx.strokeStyle = isOptimal ? '#6d28d9' : 'rgba(23, 20, 31, 0.16)';
+          ctx.strokeStyle = isOptimal ? '#1b4d3e' : 'rgba(24, 24, 23, 0.16)';
           ctx.lineWidth = isOptimal ? 1.8 : 1;
           ctx.stroke();
         });
@@ -262,7 +263,7 @@ export default function Projects() {
           ctx.arc(nx, ny, 9, 0, Math.PI * 2);
           ctx.fillStyle = '#ffffff';
           ctx.fill();
-          ctx.strokeStyle = onPath ? '#6d28d9' : 'rgba(23, 20, 31, 0.35)';
+          ctx.strokeStyle = onPath ? '#1b4d3e' : 'rgba(24, 24, 23, 0.35)';
           ctx.stroke();
         });
       } else {
@@ -278,7 +279,7 @@ export default function Projects() {
             0,
             Math.PI * 2
           );
-          ctx.strokeStyle = i === 4 ? 'rgba(109, 40, 217, 0.5)' : 'rgba(23, 20, 31, 0.14)';
+          ctx.strokeStyle = i === 4 ? 'rgba(27, 77, 62, 0.5)' : 'rgba(24, 24, 23, 0.14)';
           ctx.stroke();
         }
       }
@@ -307,12 +308,9 @@ export default function Projects() {
     >
       <div className="scene-inner">
         <div className="slate-header">
-          <div className="slate-header-left">
-            <span className="slate-code">04 // PROJETS</span>
-            <h2 className="slate-title">
-              Réalisations <span className="italic-amber">&amp; Installations</span>
-            </h2>
-          </div>
+          <h2 className="slate-title">
+            Réalisations <span className="italic-amber">&amp; Installations</span>
+          </h2>
 
           <div className="gallery-filter-bar" role="tablist" aria-label="Filtrer les réalisations">
             {projectCategories.map((cat) => (
@@ -361,7 +359,7 @@ export default function Projects() {
                         onClick={(e) => e.stopPropagation()}
                         data-hover
                       >
-                        Explorer ↗
+                        Explorer<ArrowUpRight size={13} />
                       </a>
                     )}
                   </div>

@@ -76,7 +76,7 @@ export const frames = [
   },
   {
     id: 'ebony-amethyst',
-    name: 'Ébène & Filet Améthyste',
+    name: 'Ébène & Filet Émeraude',
     image: null,
     styleClass: 'ebony-amethyst',
     inset: '-20px',

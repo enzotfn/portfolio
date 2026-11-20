@@ -256,27 +256,27 @@
   background: radial-gradient(circle, #9e8057 25%, #3a2a19 90%);
 }
 
-/* Variant 3: Ebony Wood & Amethyst Violet Fillet */
+/* Variant 3: Ebony Wood & Forest Emerald Fillet */
 .orsay-gilded-frame.frame-ebony-amethyst {
   border-image: linear-gradient(
       135deg,
-      #2e293a 0%,
-      #14111b 45%,
-      #3d354f 70%,
-      #120f18 100%
+      #27302c 0%,
+      #141816 45%,
+      #33403b 70%,
+      #101412 100%
     )
     1;
   box-shadow:
-    0 24px 60px rgba(23, 20, 31, 0.32),
-    0 0 0 2px #0b0910,
-    inset 0 0 0 3px #6d28d9,
-    inset 0 0 0 9px #faf8f5,
-    inset 0 0 0 11px #8b5cf6;
+    0 24px 60px rgba(24, 24, 23, 0.32),
+    0 0 0 2px #0b0e0c,
+    inset 0 0 0 3px #1b4d3e,
+    inset 0 0 0 9px #faf8f4,
+    inset 0 0 0 11px #2a6f59;
 }
 
 .orsay-gilded-frame.frame-ebony-amethyst .orsay-corner {
-  border-color: #a78bfa;
-  background: radial-gradient(circle, #6d28d9 25%, #17141f 90%);
+  border-color: #79a896;
+  background: radial-gradient(circle, #1b4d3e 25%, #141816 90%);
 }
 
 /* Variant 4: Modern Minimalist Gallery Box Frame */
@@ -380,7 +380,7 @@
   letter-spacing: 0.06em;
   color: var(--color-accent-violet);
   background: var(--color-accent-violet-dim);
-  border: 1px solid rgba(109, 40, 217, 0.28);
+  border: 1px solid rgba(27, 77, 62, 0.28);
   border-radius: var(--radius-xs);
   transition: all var(--transition-fast);
   white-space: nowrap;
@@ -494,7 +494,7 @@
   align-items: center;
   gap: 14px;
   padding: 13px 28px;
-  background: var(--color-accent-violet);
+  background: var(--color-accent);
   color: #ffffff;
   font-family: var(--font-mono);
   font-size: 0.82rem;
@@ -502,14 +502,14 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   border-radius: var(--radius-xs);
-  box-shadow: 0 10px 26px rgba(109, 40, 217, 0.28);
+  box-shadow: 0 10px 26px rgba(27, 77, 62, 0.24);
   transition: all var(--transition-base);
 }
 
 .hero-enter-btn:hover {
-  background: #5b21b6;
+  background: var(--color-accent-light);
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(109, 40, 217, 0.38);
+  box-shadow: 0 14px 32px rgba(27, 77, 62, 0.34);
 }
 
 .enter-arrow {

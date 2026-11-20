@@ -101,10 +101,10 @@ export default function AsciiTransition({ variant = 'dither' }) {
             if (wave > threshold * 1.15) {
               ctx.fillStyle =
                 wave > 0.85
-                  ? '#6d28d9'
+                  ? '#1b4d3e'
                   : wave > 0.62
-                  ? 'rgba(139, 92, 246, 0.55)'
-                  : 'rgba(176, 130, 33, 0.38)';
+                  ? 'rgba(42, 111, 89, 0.55)'
+                  : 'rgba(154, 107, 36, 0.38)';
               ctx.fillRect(px, py, cell - 1, cell - 1);
             }
           }
@@ -158,10 +158,10 @@ export default function AsciiTransition({ variant = 'dither' }) {
             if (ch && ch !== ' ') {
               ctx.fillStyle =
                 clamped > 0.72
-                  ? '#6d28d9'
+                  ? '#1b4d3e'
                   : clamped > 0.45
-                  ? 'rgba(109, 40, 217, 0.52)'
-                  : 'rgba(23, 20, 31, 0.24)';
+                  ? 'rgba(27, 77, 62, 0.52)'
+                  : 'rgba(24, 24, 23, 0.22)';
               ctx.fillText(ch, px, py);
             }
           }

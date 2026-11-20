@@ -1,12 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
-import { personalInfo } from '../data/portfolio-data';
 import { artworks, frames, resolveGalleryAsset } from '../data/gallery-config';
+import { ArrowDown } from './ArrowIcon';
 import './Hero.css';
 
 export default function Hero() {
   const canvasRef = useRef(null);
 
-  // Tirage aléatoire d'une œuvre et d'un cadre à chaque rafraîchissement de page
   const [artIndex, setArtIndex] = useState(() =>
     Math.floor(Math.random() * artworks.length)
   );
@@ -21,7 +20,6 @@ export default function Hero() {
   const artImageUrl = resolveGalleryAsset(currentArt.image);
   const frameImageUrl = resolveGalleryAsset(currentFrame.image);
 
-  // Fermer le mode plein écran avec la touche Échap
   useEffect(() => {
     if (!isFullArt) return;
     const onKeyDown = (e) => {
@@ -31,7 +29,6 @@ export default function Hero() {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [isFullArt]);
 
-  // Rendu procédural uniquement si l'œuvre sélectionnée n'a pas de fichier `image`
   useEffect(() => {
     if (artImageUrl) return;
     const canvas = canvasRef.current;
@@ -46,26 +43,12 @@ export default function Hero() {
       canvas.height = h * dpr;
       ctx.scale(dpr, dpr);
 
-      let seed = artIndex * 997 + 42;
-      const rand = () => {
-        seed = (seed * 1664525 + 1013904223) % 4294967296;
-        return seed / 4294967296;
-      };
-
       const bgGrad = ctx.createLinearGradient(0, 0, w, h);
-      bgGrad.addColorStop(0, '#4a3b78');
-      bgGrad.addColorStop(0.5, '#6d28d9');
+      bgGrad.addColorStop(0, '#1b4d3e');
+      bgGrad.addColorStop(0.5, '#2a6f59');
       bgGrad.addColorStop(1, '#3b526b');
       ctx.fillStyle = bgGrad;
       ctx.fillRect(0, 0, w, h);
-
-      for (let i = 0; i < 1200; i++) {
-        ctx.beginPath();
-        ctx.ellipse(rand() * w, rand() * h, 14 + rand() * 32, 5 + rand() * 12, 0, 0, Math.PI * 2);
-        ctx.fillStyle = rand() > 0.5 ? '#8b5cf6' : '#a78bfa';
-        ctx.globalAlpha = 0.28;
-        ctx.fill();
-      }
     };
 
     paintMasterpiece();
@@ -103,7 +86,7 @@ export default function Hero() {
     <section
       className={`hero ${isFullArt ? 'full-art-mode' : ''}`}
       id="hero"
-      aria-label="Accueil — Portfolio 2026"
+      aria-label="Accueil"
       onMouseMove={handleMouseMove}
       onClick={() => {
         if (isFullArt) setIsFullArt(false);
@@ -115,7 +98,6 @@ export default function Hero() {
         '--cut-bottom': cutBottom,
       }}
     >
-      {/* 1. Fond d'Œuvre d'Art (Arrière-plan ambiant flouté + Toile nette non zoomée) */}
       {artImageUrl ? (
         <>
           <img
@@ -134,10 +116,8 @@ export default function Hero() {
         <canvas ref={canvasRef} className="hero-painting-canvas" aria-hidden="true" />
       )}
 
-      {/* 2. Voile clair légèrement opaque découpé à l'intérieur du cadre (disparaît en mode plein écran) */}
       <div className="hero-opaque-veil" aria-hidden="true" />
 
-      {/* 3. Encadrement de Tableau cliquable pour afficher le fond en entier */}
       <div
         className="orsay-frame-container"
         onClick={(e) => {
@@ -179,7 +159,6 @@ export default function Hero() {
           </div>
         )}
 
-        {/* Cartel de musée sous le cadre */}
         <div className="orsay-cartel-bar" onClick={(e) => e.stopPropagation()}>
           <div className="orsay-cartel-info">
             <span className="orsay-artist">
@@ -201,7 +180,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Cartel flottant en mode Plein Écran (Œuvre entière) */}
       {isFullArt && (
         <div
           className="full-art-floating-bar"
@@ -235,14 +213,8 @@ export default function Hero() {
         </div>
       )}
 
-      {/* 4. Contenu Hero à gauche */}
       <div className="hero-content-wrapper">
         <div className="hero-left-card">
-          <div className="hero-badge-2026">
-            <span className="badge-dot" />
-            <span>PORTFOLIO 2026</span>
-          </div>
-
           <h1 className="hero-name">
             <span className="name-first">Enzo</span>
             <span className="name-last">
@@ -264,10 +236,8 @@ export default function Hero() {
               id="hero-cta"
             >
               <span>Entrer</span>
-              <span className="enter-arrow">↓</span>
+              <span className="enter-arrow"><ArrowDown size={16} /></span>
             </button>
-
-            <span className="hero-pfe-tag">{personalInfo.status}</span>
           </div>
         </div>
       </div>

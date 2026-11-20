@@ -1,17 +1,10 @@
-/* ── App-level layout & magnetic scroll-snap ─────────── */
+/* ── App-level layout (Free smooth scrolling so ASCII transitions shine) ── */
 
 main {
   position: relative;
   z-index: 1;
 }
 
-main > section {
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
-  will-change: transform, opacity;
-}
-
-/* Precision technical rail lines on desktop */
 @media (min-width: 769px) {
   main::before {
     content: '';

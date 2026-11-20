@@ -1,41 +1,23 @@
 import { useState, useEffect, useRef } from 'react';
 import './CustomCursor.css';
 
+/**
+ * Curseur rond minimaliste et direct (sans carré ni effet magnétique / latence)
+ */
 export default function CustomCursor() {
   const cursorRef = useRef(null);
-  const followerRef = useRef(null);
-  const pos = useRef({ x: -100, y: -100 });
-  const followerPos = useRef({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
-  const [isClicking, setIsClicking] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const rafId = useRef(null);
 
   useEffect(() => {
     if (window.matchMedia('(pointer: coarse)').matches) return;
 
-    const animate = () => {
-      const speed = 0.14;
-      followerPos.current.x += (pos.current.x - followerPos.current.x) * speed;
-      followerPos.current.y += (pos.current.y - followerPos.current.y) * speed;
-
-      if (followerRef.current) {
-        followerRef.current.style.transform = `translate(${followerPos.current.x - 17}px, ${followerPos.current.y - 17}px)`;
-      }
-      if (cursorRef.current) {
-        cursorRef.current.style.transform = `translate(${pos.current.x - 3}px, ${pos.current.y - 3}px)`;
-      }
-
-      rafId.current = requestAnimationFrame(animate);
-    };
-
     const handleMouseMove = (e) => {
-      pos.current = { x: e.clientX, y: e.clientY };
+      if (cursorRef.current) {
+        cursorRef.current.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+      }
       if (!isVisible) setIsVisible(true);
     };
-
-    const handleDown = () => setIsClicking(true);
-    const handleUp = () => setIsClicking(false);
 
     const handleOver = (e) => {
       const target = e.target;
@@ -52,36 +34,22 @@ export default function CustomCursor() {
 
     const handleOut = () => setIsHovering(false);
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mousedown', handleDown);
-    window.addEventListener('mouseup', handleUp);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     document.addEventListener('mouseover', handleOver);
     document.addEventListener('mouseout', handleOut);
 
-    rafId.current = requestAnimationFrame(animate);
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('mousedown', handleDown);
-      window.removeEventListener('mouseup', handleUp);
       document.removeEventListener('mouseover', handleOver);
       document.removeEventListener('mouseout', handleOut);
-      if (rafId.current) cancelAnimationFrame(rafId.current);
     };
   }, [isVisible]);
 
-  if (!isVisible) return null;
-
   return (
-    <>
-      <div
-        ref={cursorRef}
-        className={`custom-cursor ${isHovering ? 'hovering' : ''} ${isClicking ? 'clicking' : ''}`}
-      />
-      <div
-        ref={followerRef}
-        className={`cursor-follower ${isHovering ? 'hovering' : ''}`}
-      />
-    </>
+    <div
+      ref={cursorRef}
+      className={`custom-cursor ${isHovering ? 'hovering' : ''} ${isVisible ? 'visible' : ''}`}
+      aria-hidden="true"
+    />
   );
 }

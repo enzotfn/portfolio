@@ -15,7 +15,7 @@ export const personalInfo = {
       <br /><br />
       Nourri par une forte attirance pour les musées, les œuvres d&apos;art classiques et contemporaines, le cinéma et quatre années de mise en scène théâtrale, j&apos;apporte dans l&apos;ingénierie technique un souci constant de la composition, du rythme et de l&apos;immersion.
       <br /><br />
-      <span className="bio-focus-label">PROCHAINE ÉTAPE //</span> À la recherche d&apos;un stage de fin d&apos;études (PFE) de 6 mois à partir de mi-février ou mars 2027 — orienté ingénierie créative, XR / informatique spatiale ou développement logiciel à fort impact.
+      <span className="bio-focus-label">Objectif :</span> À la recherche d&apos;un stage de fin d&apos;études (PFE) de 6 mois à partir de mi-février ou mars 2027 — orienté ingénierie créative, XR / informatique spatiale ou développement logiciel.
     </>
   ),
   email: 'enzo.tofani@etu.univ-nantes.fr',
@@ -35,163 +35,97 @@ export const personalInfo = {
 export const services = [
   {
     id: 'xr',
-    code: 'SYS-01',
     title: 'Informatique Spatiale & XR',
-    subtitle: 'Systèmes VR & Captation 360° Multi-Points de Vue',
-    description:
-      'Conception d’environnements immersifs et d’interactions spatiales. Synchronisation de flux vidéo 360°, déploiement sur casques de réalité virtuelle et expérimentations avec lunettes-caméras pour l’auto-confrontation et l’immersion.',
-    tags: ['Casques VR', 'Caméras 360°', 'Optique Embarquée', 'Synchro Spatiale', 'R&D'],
-    linkedSkills: ['Python & Intégration IA', 'C / C++', 'React / Vite / CSS Moderne'],
-    proofs: [
-      'Plateforme VR d’auto-confrontation (bascule temps réel entre flux 360° synchronisés)',
-      'État de l’art académique sur les protocoles immersifs multi-angles',
-    ],
+    shortDesc: 'Applications VR, flux vidéo 360° synchronisés et lunettes-caméras pour l’immersion.',
+    tags: ['Casques VR', 'Caméras 360°', 'Optique', 'R&D'],
   },
   {
     id: 'fullstack',
-    code: 'SYS-02',
-    title: 'Développement Web & Full-Stack',
-    subtitle: 'De la Base de Données à l’Interface',
-    description:
-      'Applications web de production taillées sur mesure. React, Vite, Strapi, Tailwind : aucun template générique, des micro-interactions soignées, des webhooks automatisés et des agents IA conversationnels.',
-    tags: ['React 19', 'Vite', 'Tailwind', 'Strapi CMS', 'REST / Webhooks', 'Agents IA'],
-    linkedSkills: ['React / Vite / CSS Moderne', 'Full-Stack (Node / Strapi / SQL)', 'Python & Intégration IA'],
-    proofs: [
-      'South Tours Málaga — Conception et mise en production en autonomie (south.tours)',
-      'Happy Hour Nantes & Voituragogo — Architectures web responsives',
-    ],
+    title: 'Web & Full-Stack',
+    shortDesc: 'Plateformes web livrées en production : backend headless, interfaces rapides et agents IA.',
+    tags: ['React 19', 'Vite', 'Strapi', 'Tailwind'],
   },
   {
     id: 'systems',
-    code: 'SYS-03',
     title: 'Systèmes & Code Concurrent',
-    subtitle: 'Mémoire Bas-Niveau, Physique & Heuristiques',
-    description:
-      'Développement logiciel déterministe en C/C++, Golang, Java et Python. Des moteurs physiques de particules utilisant les goroutines jusqu’aux algorithmes de routage par théorie des graphes et IA de jeu.',
-    tags: ['C / C++', 'Golang', 'Python', 'Java / Kotlin', 'Goroutines', 'Algorithmes'],
-    linkedSkills: ['C / C++', 'Golang', 'Python & Intégration IA', 'Kotlin & Android / Java'],
-    proofs: [
-      'Moteur de Particules Go — Simulation physique 2D temps réel via goroutines',
-      'IA Heuristique Risk — Arbres de décision en C++ et Python',
-      'Poly# — Calcul de routage optique optimal par théorie des graphes',
-    ],
+    shortDesc: 'Moteurs physiques en Go, simulations bas-niveau en C et algorithmes de routage en Python.',
+    tags: ['C / C++', 'Golang', 'Python', 'Java / Kotlin'],
   },
   {
     id: 'network',
-    code: 'SYS-04',
-    title: 'Architecture Réseau & Ops',
-    subtitle: 'Systèmes Distribués & Synchronisation Terrain',
-    description:
-      'Spécialisation réseau à Polytech Nantes : routage de paquets bruts, programmation socket, serveurs d’impression Linux autonomes et synchronisation de terminaux mobiles sous forte charge en festival.',
-    tags: ['TCP/IP & Sockets', 'Daemons Linux', 'Anneaux de Paquets', 'Clients Android', 'Infrastructure'],
-    linkedSkills: ['Linux, Bash & Réseaux', 'C / C++', 'Kotlin & Android / Java', 'Python & Intégration IA'],
-    proofs: [
-      'Festival La Nuit de l’Erdre — Réseau local de prise de commande Android vers Linux',
-      'Boucle Réseau Déterministe — Simulation d’anneau à paquet unique en C pur',
-      'BRAS Immobilier — Déploiement de parc et supervision réseau multi-agences',
-    ],
+    title: 'Architecture Réseau',
+    shortDesc: 'Protocoles distribués, sockets, serveurs Linux et synchronisation temps réel en festival.',
+    tags: ['TCP/IP', 'Linux', 'Sockets', 'Android'],
   },
   {
     id: 'direction',
-    code: 'SYS-05',
     title: 'Scénographie & Direction Visuelle',
-    subtitle: 'Sensibilité Artistique, Musées & Mise en Scène',
-    description:
-      'Forgé par une passion pour les œuvres d’art et les musées, 4 ans de mise en scène théâtrale et la participation au jury d’un festival de cinéma européen. Une approche qui traite chaque interface comme une composition vivante.',
-    tags: ['Mise en Scène', 'Culture Muséale', 'Jury Cinéma', 'Composition Spatiale', 'Direction UI'],
-    linkedSkills: ['React / Vite / CSS Moderne'],
-    proofs: [
-      '4 années de jeu et de mise en scène théâtrale avec représentations publiques',
-      '2 éditions comme membre du jury au Festival Européen Univerciné',
-      'Hackathon Musée — Conception d’une application de fluidification des parcours visiteurs',
-    ],
+    shortDesc: 'Sensibilité muséale, 4 ans de mise en scène théâtrale et jury de festival de cinéma.',
+    tags: ['Mise en Scène', 'Musées', 'Cinéma', 'Direction UI'],
   },
 ];
 
 export const education = [
   {
     id: 'edu-polytech',
-    code: 'EDU-02',
-    track: 'ACADÉMIQUE',
-    year: '2024 — 2027',
     institution: 'Polytech Nantes — École d’Ingénieurs',
-    period: '2024 — 2027 (En cours)',
-    location: 'Nantes, France',
-    focus: 'Génie Informatique · Spécialisation Réseaux & Systèmes Distribués',
-    description:
-      'Cycle ingénieur informatique avec spécialisation en architecture réseau. Formation approfondie en systèmes d’exploitation, protocoles distribués, algorithmique avancée, programmation concurrente et R&D en réalité virtuelle.',
-    highlights: ['Spécialisation Réseaux & Systèmes', 'Projet R&D VR 360°', 'Diplôme d’Ingénieur (2027)'],
+    period: '2024 — 2027',
+    location: 'Nantes',
+    focus: 'Génie Informatique · Spécialisation Réseaux',
+    shortSummary: 'Systèmes d’exploitation, protocoles distribués, programmation concurrente et R&D en réalité virtuelle.',
+    highlights: ['Réseaux & Systèmes', 'R&D VR 360°', 'Diplôme Ingénieur 2027'],
   },
   {
     id: 'edu-iut',
-    code: 'EDU-01',
-    track: 'ACADÉMIQUE',
-    year: '2022 — 2024',
-    institution: 'IUT de Nantes — Cycle Préparatoire Polytech (PeiP)',
+    institution: 'IUT de Nantes — Cycle Préparatoire (PeiP)',
     period: '2022 — 2024',
-    location: 'Nantes, France',
-    focus: 'Informatique Fondamentale & Systèmes',
-    description:
-      'Deux années de parcours universitaire préparatoire aux écoles Polytech en informatique. Bases solides en structures de données, programmation orientée objet (Java, Kotlin, C++), bases de données relationnelles, Linux et langage C.',
-    highlights: ['Structures de Données & Algo', 'Programmation C & Unix', 'POO Java / Kotlin'],
+    location: 'Nantes',
+    focus: 'Informatique Fondamentale',
+    shortSummary: 'Structures de données, POO (Java, Kotlin, C++), bases de données relationnelles et Unix/C.',
+    highlights: ['Algorithmique', 'C & Unix', 'Java / Kotlin'],
   },
 ];
 
 export const experience = [
   {
     id: 'exp-southtours',
-    code: 'EXP-04',
-    track: 'PRODUCTION',
-    year: '2026',
-    role: 'Développeur Full-Stack (Stage en autonomie complète)',
-    company: 'South Tours, Málaga (Espagne)',
-    period: 'Mai 2026 — Août 2026',
-    location: 'Málaga, Espagne',
-    stack: ['React', 'Vite', 'Strapi', 'Tailwind', 'Agent IA', 'Webhooks'],
-    description: (
+    role: 'Développeur Full-Stack (Autonomie complète)',
+    company: 'South Tours — Málaga (Espagne)',
+    period: 'Mai — Août 2026',
+    location: 'Málaga',
+    stack: ['React', 'Vite', 'Strapi', 'Agent IA'],
+    shortSummary: (
       <>
-        Conception et développement complet du nouveau <a href="https://south.tours" target="_blank" rel="noopener noreferrer">site de production</a> d&apos;une entreprise de tourisme en tant que seul développeur sur place. Architecture backend Strapi, frontend React/Vite/Tailwind, création de webhooks automatisés et intégration d&apos;un agent IA conversationnel.
+        Création complète du <a href="https://south.tours" target="_blank" rel="noopener noreferrer">site de production</a> en tant que seul développeur : Strapi, React, webhooks et agent IA conversationnel.
       </>
     ),
   },
   {
     id: 'exp-drillscan',
-    code: 'EXP-03',
-    track: 'INGÉNIERIE',
-    year: '2025',
-    role: 'Stage en Documentation Logicielle & Structuration',
-    company: 'DrillScan — Helmerich & Payne, Lyon (France)',
-    period: 'Juin 2025 — Août 2025',
-    location: 'Lyon, France',
-    stack: ['Architecture Documentaire', 'Migration Technique', 'Outillage Dev', 'Collaboration R&D'],
-    description:
-      'Intégré directement à l’équipe de développement d’un éditeur international de logiciels scientifiques de forage. Refonte, restructuration et migration de la documentation technique afin d’en améliorer la clarté et l’usage quotidien entre ingénieurs et développeurs.',
+    role: 'Stage Documentation Logicielle',
+    company: 'DrillScan (Helmerich & Payne) — Lyon',
+    period: 'Juin — Août 2025',
+    location: 'Lyon',
+    stack: ['Architecture Doc', 'Migration', 'R&D'],
+    shortSummary: 'Refonte et migration de la documentation d’un logiciel scientifique en lien direct avec les développeurs.',
   },
   {
     id: 'exp-bras',
-    code: 'EXP-02',
-    track: 'INFRASTRUCTURE',
-    year: '2024',
-    role: 'Stage Support Systèmes & Infrastructure IT',
-    company: 'BRAS Immobilier, Nantes (France)',
-    period: 'Avril 2024 — Juillet 2024',
-    location: 'Nantes, France',
-    stack: ['Déploiement de Parc', 'Administration Système', 'Supervision Réseau', 'Support Technique'],
-    description:
-      'Support technique aux collaborateurs, préparation et déploiement des équipements informatiques, supervision de l’infrastructure système et rédaction de procédures techniques claires pour les équipes.',
+    role: 'Stage Support Systèmes & Réseau',
+    company: 'BRAS Immobilier — Nantes',
+    period: 'Avril — Juillet 2024',
+    location: 'Nantes',
+    stack: ['Déploiement', 'SysAdmin', 'Support'],
+    shortSummary: 'Déploiement de parc informatique, supervision système et support technique multi-agences.',
   },
   {
     id: 'exp-goupil',
-    code: 'EXP-01',
-    track: 'OPÉRATIONS TERRAIN',
-    year: '2019 — 2023',
-    role: 'Employé Polyvalent & Gestion d’Espaces de Loisirs',
-    company: 'La Forêt de Goupil — Les Manèges, Nancy (France)',
-    period: '2019 — 2023 (4 Ans)',
-    location: 'Nancy, France',
-    stack: ['Gestion de Flux', 'Sang-Froid & Sécurité', 'Maintenance Matérielle', 'Encadrement Public'],
-    description:
-      'Quatre années consécutives à encadrer enfants, adolescents et adultes au sein d’un grand complexe de loisirs (laser game, trampoline park, karting indoor, salle d’arcade) durant les week-ends et vacances scolaires. Gestion de la sécurité, maintenance rapide et maîtrise des fortes affluences.',
+    role: 'Opérateur Polyvalent — Complexe de Loisirs',
+    company: 'La Forêt de Goupil — Nancy',
+    period: '2019 — 2023',
+    location: 'Nancy',
+    stack: ['Gestion de Flux', 'Sécurité', 'Maintenance'],
+    shortSummary: '4 ans d’encadrement public (laser game, karting, trampoline park) durant les week-ends et vacances.',
   },
 ];
 
