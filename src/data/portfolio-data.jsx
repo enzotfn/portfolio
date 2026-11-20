@@ -255,7 +255,7 @@ export const projects = [
     title: 'Projet R&D — Réalité Virtuelle & Auto-Confrontation',
     category: 'Applications',
     simType: 'vr360',
-    year: '2026',
+    year: '2026 — 2027',
     description:
       'Visualisation immersive multi-points de vue d’une activité pour l’auto-confrontation. Rédaction d’un état de l’art scientifique, puis développement d’une application de réalité virtuelle permettant de visionner des vidéos 360° synchronisées et de basculer d’un angle de vue à l’autre en temps réel (caméras 360° professionnelles, casques VR et lunettes caméra).',
     tech: 'Casques VR · Caméras 360° · Lunettes Caméra',
@@ -268,7 +268,7 @@ export const projects = [
     title: 'Espace Partenaires en Réseau — La Nuit de l’Erdre',
     category: 'Réseau',
     simType: 'network',
-    year: '2025',
+    year: '2025 — 2026',
     description:
       'Développement d’une architecture réseau en Python pour synchroniser la prise de commandes depuis des téléphones Android vers des postes de préparation sous Linux, incluant l’impression thermique automatique des bons via une API et une base de données locale.',
     tech: 'Android · API Python · Serveurs Linux',
@@ -282,7 +282,7 @@ export const projects = [
     title: 'Moteur de Système de Particules en Go',
     category: 'Applications',
     simType: 'particles',
-    year: '2024',
+    year: '2022 — 2023',
     description:
       'Application développée en Golang pour simuler des systèmes de particules physiques en 2D temps réel, exploitant la concurrence pour calculer les vecteurs de vélocité, la gravité et les collisions.',
     tech: 'Golang · Concurrence · Physique 2D',
@@ -295,7 +295,7 @@ export const projects = [
     title: 'Boucle Réseau Locale à Paquet Unique',
     category: 'Réseau',
     simType: 'ring',
-    year: '2024',
+    year: '2024 — 2025',
     description:
       'Application bas-niveau écrite en C pur permettant de simuler une boucle réseau locale en anneau dans laquelle circule un unique paquet de données sans perte ni collision.',
     tech: 'Langage C · Sockets · Topologie en Anneau',
@@ -308,7 +308,7 @@ export const projects = [
     title: 'Poly# — Optimisation de Routage Réseau',
     category: 'Applications',
     simType: 'graph',
-    year: '2024',
+    year: '2024 — 2025',
     description:
       'Développement d’un moteur algorithmique en Python chargé de calculer la route optimale et de minimiser la latence pour un opérateur réseau à travers un graphe pondéré.',
     tech: 'Python · Théorie des Graphes · Algorithmes',
@@ -321,7 +321,7 @@ export const projects = [
     title: 'Intelligence Artificielle sur le Jeu Risk',
     category: 'Applications',
     simType: 'ai',
-    year: '2024',
+    year: '2025 — 2026',
     description:
       'Conception d’une intelligence artificielle capable de jouer de manière autonome au jeu de stratégie Risk, combinant la rapidité d’exécution du C++ et la souplesse de Python pour évaluer les probabilités de conquête.',
     tech: 'Python · C++ · Arbres Heuristiques',
@@ -334,7 +334,7 @@ export const projects = [
     title: 'Jury du Festival Univerciné Nantes',
     category: 'Autres',
     simType: 'cinema',
-    year: '2023 — 2025',
+    year: '2024 — 2026',
     description:
       'Membre du jury officiel d’un festival de cinéma européen à Nantes pendant 2 ans. Visionnage de longs-métrages en compétition, délibérations critiques et remise des prix en public.',
     tech: 'Jury Cinéma · Analyse Critique · Culture',
@@ -348,7 +348,7 @@ export const projects = [
     title: 'Théâtre — Jeu & Mise en Scène à Nantes',
     category: 'Autres',
     simType: 'stage',
-    year: '2022 — 2026',
+    year: '2023 — 2027',
     description:
       'Quatre années au sein de l’atelier de pratique théâtrale avec représentations publiques, à la fois comme comédien et metteur en scène. Travail de l’espace, du rythme dramaturgique et de la direction de troupe.',
     tech: 'Mise en Scène · Jeu d’Acteur · Scénographie',
@@ -362,7 +362,7 @@ export const projects = [
     title: 'Hackathon Java — Expérience au Musée',
     category: 'Applications',
     simType: 'graph',
-    year: '2024',
+    year: '2024 — 2025',
     description:
       'Conception en équipe d’une application Java lors d’un hackathon pour résoudre une problématique concrète de parcours et de médiation au sein d’un musée.',
     tech: 'Java · Hackathon · Scénographie Muséale',
@@ -375,7 +375,7 @@ export const projects = [
     title: 'Mixed Media Utilities',
     category: 'Applications',
     simType: 'pipeline',
-    year: '2024',
+    year: '2026',
     description:
       'Création d’une suite d’outils en Python permettant d’analyser, trier, convertir et gérer automatiquement des bibliothèques de fichiers multimédias hétérogènes.',
     tech: 'Python · Automatisation Média · CLI',
@@ -389,7 +389,7 @@ export const projects = [
     title: 'PrimeSetup — E-Commerce',
     category: 'Web Design',
     simType: 'ui',
-    year: '2023',
+    year: '2022 — 2023',
     description:
       'Conception graphique et développement d’un site de vente en ligne dédié aux équipements et espaces de travail, avec un soin particulier porté à la hiérarchie visuelle.',
     tech: 'UI/UX Design · Web Responsive',
@@ -402,7 +402,7 @@ export const projects = [
     title: 'Happy Hour Nantes',
     category: 'Web Design',
     simType: 'ui',
-    year: '2023',
+    year: '2022',
     description:
       'Création du design et développement d’un site web culturel et convivial répertoriant les adresses nantaises.',
     tech: 'HTML/CSS/JS · Design Éditorial',
@@ -416,7 +416,7 @@ export const projects = [
     title: 'Voituragogo',
     category: 'Développement Web',
     simType: 'ui',
-    year: '2023',
+    year: '2022',
     description:
       'Développement et intégration fidèle d’une application web à partir d’une maquette graphique exigeante, dans le respect des standards d’accessibilité et de responsive design.',
     tech: 'Intégration Web · CSS Grid · HTML Sémantique',
