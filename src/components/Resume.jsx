@@ -7,7 +7,7 @@ export default function Resume() {
       <div className="scene-inner">
         <div className="slate-header">
           <h2 className="slate-title">
-            Trajectoire &amp; <span className="italic-amber">Expériences</span>
+            Trajectoire <span className="italic-amber">&amp; Expériences</span>
           </h2>
         </div>
 
